@@ -1,36 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>DOT.NET - Digital Agency Website Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik&display=swap" rel="stylesheet"> 
-
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+{%extends 'homepage.html'%}
+{% load static%}
+{%block content%}
 
 <body>
     <!-- Navbar Start -->
     <div class="container-fluid bg-white position-relative">
         <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand text-secondary">
+            <a href="{% url 'index' %}" class="navbar-brand text-secondary">
                 <h1 class="display-4 text-uppercase">DOT.NET</h1>
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -76,7 +52,7 @@
                 <a href="" class="btn btn-dark text-uppercase mt-1 py-3 px-5">Learn More</a>
             </div>
             <div class="col-lg-6 px-0 text-right">
-                <img class="img-fluid mt-5 mt-lg-0" src="img/header.png" alt="">
+                <img class="img-fluid mt-5 mt-lg-0" src="{% static 'img/header.png' %}" alt="">
             </div>
         </div>
     </div>
@@ -88,7 +64,7 @@
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <img class="img-fluid mb-4 mb-lg-0" src="img/about.jpg" alt="">
+                    <img class="img-fluid mb-4 mb-lg-0" src="{% static 'img/about.jpg' %}" alt="">
                 </div>
                 <div class="col-lg-6">
                     <h1 class="display-4 text-uppercase mb-4">Best digital agency in downtown</h1>
@@ -163,9 +139,9 @@
             <div class="row portfolio-container">
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
                     <div class="position-relative rounded overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="">
+                        <img class="img-fluid w-100" src="{% static 'img/portfolio-1.jpg' %}" alt="">
                         <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-1.jpg" data-lightbox="portfolio">
+                            <a href="{%static 'img/portfolio-1.jpg' %}" data-lightbox="portfolio">
                                 <i class="fa fa-4x fa-plus text-primary"></i>
                             </a>
                         </div>
@@ -173,9 +149,9 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
                     <div class="position-relative rounded overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="img/portfolio-2.jpg" alt="">
+                        <img class="img-fluid w-100" src="{% static 'img/portfolio-2.jpg' %}" alt="">
                         <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-2.jpg" data-lightbox="portfolio">
+                            <a href="{% static 'img/portfolio-2.jpg' %}" data-lightbox="portfolio">
                                 <i class="fa fa-4x fa-plus text-primary"></i>
                             </a>
                         </div>
@@ -183,9 +159,9 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
                     <div class="position-relative rounded overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="img/portfolio-3.jpg" alt="">
+                        <img class="img-fluid w-100" src="{%static 'img/portfolio-3.jpg' %}" alt="">
                         <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-3.jpg" data-lightbox="portfolio">
+                            <a href="{%static 'img/portfolio-3.jpg' %}" data-lightbox="portfolio">
                                 <i class="fa fa-4x fa-plus text-primary"></i>
                             </a>
                         </div>
@@ -193,9 +169,9 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
                     <div class="position-relative rounded overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="img/portfolio-4.jpg" alt="">
+                        <img class="img-fluid w-100" src="{%static 'img/portfolio-4.jpg'%}" alt="">
                         <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-4.jpg" data-lightbox="portfolio">
+                            <a href="{% static 'img/portfolio-4.jpg' %}" data-lightbox="portfolio">
                                 <i class="fa fa-4x fa-plus text-primary"></i>
                             </a>
                         </div>
@@ -203,9 +179,9 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
                     <div class="position-relative rounded overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="img/portfolio-5.jpg" alt="">
+                        <img class="img-fluid w-100" src="{%static 'img/portfolio-5.jpg' %}" alt="">
                         <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-3.jpg" data-lightbox="portfolio">
+                            <a href="{%static 'img/portfolio-3.jpg' %}" data-lightbox="portfolio">
                                 <i class="fa fa-4x fa-plus text-primary"></i>
                             </a>
                         </div>
@@ -213,9 +189,9 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
                     <div class="position-relative rounded overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="img/portfolio-6.jpg" alt="">
+                        <img class="img-fluid w-100" src="{%static 'img/portfolio-6.jpg' %}" alt="">
                         <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-4.jpg" data-lightbox="portfolio">
+                            <a href="{%static 'img/portfolio-4.jpg' %}" data-lightbox="portfolio">
                                 <i class="fa fa-4x fa-plus text-primary"></i>
                             </a>
                         </div>
@@ -308,7 +284,7 @@
             <div class="owl-carousel team-carousel position-relative" style="padding-left: 30px;">
                 <div class="team-item rounded overflow-hidden">
                     <div class="position-relative">
-                        <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
+                        <img class="img-fluid w-100" src="{% static 'img/team-1.jpg' %]" alt="">
                         <div class="team-overlay">
                             <div class="d-flex align-items-center justify-content-start">
                                 <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
@@ -324,7 +300,7 @@
                 </div>
                 <div class="team-item rounded overflow-hidden">
                     <div class="position-relative">
-                        <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
+                        <img class="img-fluid w-100" src="{% static 'img/team-2.jpg' %}" alt="">
                         <div class="team-overlay">
                             <div class="d-flex align-items-center justify-content-start">
                                 <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
@@ -340,7 +316,7 @@
                 </div>
                 <div class="team-item rounded overflow-hidden">
                     <div class="position-relative">
-                        <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
+                        <img class="img-fluid w-100" src="{%static 'img/team-3.jpg' %}" alt="">
                         <div class="team-overlay">
                             <div class="d-flex align-items-center justify-content-start">
                                 <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
@@ -356,7 +332,7 @@
                 </div>
                 <div class="team-item rounded overflow-hidden">
                     <div class="position-relative">
-                        <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
+                        <img class="img-fluid w-100" src="{%static 'img/team-4.jpg' %}" alt="">
                         <div class="team-overlay">
                             <div class="d-flex align-items-center justify-content-start">
                                 <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
@@ -382,25 +358,25 @@
             <h1 class="display-4 text-uppercase text-center mb-5">Our Client's Say</h1>
             <div class="owl-carousel testimonial-carousel">
                 <div class="testimonial-item position-relative text-center rounded p-4">
-                    <img class="img-fluid rounded mx-auto my-4" src="img/testimonial-1.jpg" alt="">
+                    <img class="img-fluid rounded mx-auto my-4" src="{% static 'img/testimonial-1.jpg' %}" alt="">
                     <h5 class="text-uppercase">Client Name</h5>
                     <p class="text-uppercase">Profession</p>
                     <p class="text-secondary">Tempor lorem dolor sea et ipsum, lorem justo kasd dolore vero eos. Lorem duo ipsum sea amet et clita dolor</p>
                 </div>
                 <div class="testimonial-item position-relative text-center rounded p-4">
-                    <img class="img-fluid rounded mx-auto my-4" src="img/testimonial-2.jpg" alt="">
+                    <img class="img-fluid rounded mx-auto my-4" src="{% static 'img/testimonial-2.jpg' %}" alt="">
                     <h5 class="text-uppercase">Client Name</h5>
                     <p class="text-uppercase">Profession</p>
                     <p class="text-secondary">Tempor lorem dolor sea et ipsum, lorem justo kasd dolore vero eos. Lorem duo ipsum sea amet et clita dolor</p>
                 </div>
                 <div class="testimonial-item position-relative text-center rounded p-4">
-                    <img class="img-fluid rounded mx-auto my-4" src="img/testimonial-3.jpg" alt="">
+                    <img class="img-fluid rounded mx-auto my-4" src="{% static 'img/testimonial-3.jpg' %}" alt="">
                     <h5 class="text-uppercase">Client Name</h5>
                     <p class="text-uppercase">Profession</p>
                     <p class="text-secondary">Tempor lorem dolor sea et ipsum, lorem justo kasd dolore vero eos. Lorem duo ipsum sea amet et clita dolor</p>
                 </div>
                 <div class="testimonial-item position-relative text-center rounded p-4">
-                    <img class="img-fluid rounded mx-auto my-4" src="img/testimonial-4.jpg" alt="">
+                    <img class="img-fluid rounded mx-auto my-4" src="{% static 'img/testimonial-4.jpg' %}" alt="">
                     <h5 class="text-uppercase">Client Name</h5>
                     <p class="text-uppercase">Profession</p>
                     <p class="text-secondary">Tempor lorem dolor sea et ipsum, lorem justo kasd dolore vero eos. Lorem duo ipsum sea amet et clita dolor</p>
@@ -465,10 +441,10 @@
     <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-md-5" style="margin-top: 90px;">
         <div class="row pt-5">
             <div class="col-lg-3 col-md-6 mb-5">
-                <a href="index.html" class="navbar-brand">
-                    <h1 class="m-0 mt-n2 text-white display-4">DOT.NET</h1>
+                <a href="{% url 'index' %}" class="navbar-brand">
+                    <h1 class="m-0 mt-n2 text-white display-4">{{ setting.title }}</h1>
                 </a>
-                <p>Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
+                <!-- <p>Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p> -->
                 <h6 class="text-uppercase text-white py-2">Follow Us</h6>
                 <div class="d-flex justify-content-start">
                     <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
@@ -480,9 +456,9 @@
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="text-uppercase text-white mb-4">Get In Touch</h4>
                 <p>Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
-                <p><i class="fa fa-map-marker-alt text-white mr-2"></i>123 Street, New York, USA</p>
-                <p><i class="fa fa-phone-alt text-white mr-2"></i>+012 345 67890</p>
-                <p><i class="fa fa-envelope text-white mr-2"></i>info@example.com</p>
+                <p><i class="fa fa-map-marker-alt text-white mr-2"></i>{{ setting.address }}</p>
+                <p><i class="fa fa-phone-alt text-white mr-2"></i>{{ setting.phone }}</p>
+                <p><i class="fa fa-envelope text-white mr-2"></i>{{ setting.email }}</p>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="text-uppercase text-white mb-4">Quick Links</h4>
@@ -496,8 +472,8 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-uppercase text-white mb-4">Newsletter</h4>
-                <p class="mb-4">Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
+                <h4 class="text-uppercase text-white mb-4">Описание</h4>
+                <p class="mb-4">{{ setting.description }}</p>
                 <div class="w-100 mb-3">
                     <div class="input-group">
                         <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Your Email">
@@ -511,31 +487,13 @@
         </div>
     </div>
     <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111;">
-        <p class="mb-2 text-center text-white-50">&copy; <a href="#">Your Site Name</a>. All Rights Reserved.</p>
-        <p class="m-0 text-center text-white-50">Designed by <a href="https://htmlcodex.com">HTML Codex</a></p>
+        <p class="mb-2 text-center text-white-50">&copy; <a href="#">SkillBox Clone</a>. All Rights Reserved.</p>
+        <p class="m-0 text-center text-white-50">Designed by <a href="https://www.instagram.com/itsaallicho/"></a>itsaallicho</a></p>
     </div>
     <!-- Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-up"></i></a>
+   
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-</body>
-
-</html>
+{%endblock%}
