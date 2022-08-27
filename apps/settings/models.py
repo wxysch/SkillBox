@@ -20,3 +20,14 @@ class Setting(models.Model):
     class Meta:
         verbose_name = "Настройка"
         verbose_name_plural = "Настройки"
+
+class ItRunLogo(models.Model):
+    title = models.CharField(max_length=100)
+    it_run_logo = models.ImageField(upload_to = 'logo/', verbose_name="Логотип")
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "Логотип"
+        verbose_name_plural = "Логотипы"

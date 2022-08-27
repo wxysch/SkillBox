@@ -3,61 +3,8 @@
 {%block content%}
 
 <body>
-    <!-- Navbar Start -->
-    <div class="container-fluid bg-white position-relative">
-        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
-            <a href="{% url 'index' %}" class="navbar-brand text-secondary">
-                <h1 class="display-4 text-uppercase">DOT.NET</h1>
-            </a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ml-auto py-0 pr-3 border-right">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link">Services</a>
-                    <a href="price.html" class="nav-item nav-link">Prices</a>
-                    <a href="project.html" class="nav-item nav-link">Projects</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu rounded-0 m-0">
-                            <a href="team.html" class="dropdown-item">Meat The Team</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        </div>
-                    </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
-                </div>
-                <div class="d-none d-lg-flex align-items-center pl-4">
-                    <i class="fa fa-2x fa-mobile-alt text-primary mr-3"></i>
-                    <div>
-                        <h6 class="text-body text-uppercase mb-1"><small>Call Anytime</small></h6>
-                        <h6 class="m-0">+012 345 6789</h6>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <!-- Navbar End -->
 
-
-    <!-- Header Start -->
-    <div class="container-fluid bg-primary py-5 px-0" style="margin-bottom: 90px;">
-        <div class="row mx-0 align-items-center">
-            <div class="col-lg-6 px-md-5 text-center text-lg-left">
-                <h1 class="display-2 text-uppercase mb-3">Best Digital Marketing Agency</h1>
-                <p class="text-dark mb-4">Sea ipsum kasd eirmod kasd magna, est sea et diam ipsum est amet sed sit.
-                    Ipsum dolor no justo dolor et, lorem ut dolor erat dolore sed ipsum at ipsum nonumy amet. Clita
-                    lorem dolore sed stet et est justo dolore.</p>
-                <a href="" class="btn btn-dark text-uppercase mt-1 py-3 px-5">Learn More</a>
-            </div>
-            <div class="col-lg-6 px-0 text-right">
-                <img class="img-fluid mt-5 mt-lg-0" src="{% static 'img/header.png' %}" alt="">
-            </div>
-        </div>
-    </div>
-    <!-- Header End -->
-
+    {% include 'include/header.html' %}  
 
     <!-- About Start -->
     <div class="container-fluid py-5">
@@ -67,10 +14,12 @@
                     <img class="img-fluid mb-4 mb-lg-0" src="{% static 'img/about.jpg' %}" alt="">
                 </div>
                 <div class="col-lg-6">
-                    <h1 class="display-4 text-uppercase mb-4">Best digital agency in downtown</h1>
-                    <h5 class="text-uppercase text-primary mb-3">Clita elitr et amet et ipsum sea. Ipsum stet kasd ea et no est duo diam. Lorem dolores eos ut nonumy ipsum sit clita lorem no amet dolor dolore, stet sit dolor justo</h5>
-                    <p class="mb-4">Eirmod est dolor nonumy sea amet dolore erat sit dolor et dolor vero. Tempor ipsum at justo amet at ipsum justo. Aiam kasd sea sit dolor duo elitr dolor amet, justo est ipsum amet dolor ut ipsum. Labore diam et nonumy amet dolores. Volup sit labore dolores erat, magna justo sed lorem kasd ea dolor. Labore sit clita invidunt, est dolores lorem sed ipsum kasd no amet ipsum.</p>
-                    <a href="" class="btn btn-primary text-uppercase py-3 px-5">Read More</a>
+                    <h1 class="display-4 text-uppercase mb-4">ЛУЧШЕЕ ЦИФРОВОЕ АГЕНТСТВО В ЦЕНТРЕ</h1>
+                    <h5 class="text-uppercase text-primary mb-3">Образовательная платформа №1
+
+                        по качеству обучения. Вы получите знания, которые помогут вам освоить профессию мечты и изменить жизнь.</h5>
+                    <p class="mb-4">Обучение на платформе нацелено на практику: в каждом курсе — только актуальные темы, востребованные навыки и задания для их отработки. Мы регулярно обновляем материалы курсов, помогаем с трудоустройством и стажировкой.</p>
+                    <a href="" class="btn btn-primary text-uppercase py-3 px-5">Узнать больше</a>
                 </div>
             </div>
         </div>
@@ -437,61 +386,7 @@
     <!-- Contact End -->
 
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-md-5" style="margin-top: 90px;">
-        <div class="row pt-5">
-            <div class="col-lg-3 col-md-6 mb-5">
-                <a href="{% url 'index' %}" class="navbar-brand">
-                    <h1 class="m-0 mt-n2 text-white display-4">{{ setting.title }}</h1>
-                </a>
-                <!-- <p>Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p> -->
-                <h6 class="text-uppercase text-white py-2">Follow Us</h6>
-                <div class="d-flex justify-content-start">
-                    <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-uppercase text-white mb-4">Get In Touch</h4>
-                <p>Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
-                <p><i class="fa fa-map-marker-alt text-white mr-2"></i>{{ setting.address }}</p>
-                <p><i class="fa fa-phone-alt text-white mr-2"></i>{{ setting.phone }}</p>
-                <p><i class="fa fa-envelope text-white mr-2"></i>{{ setting.email }}</p>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-uppercase text-white mb-4">Quick Links</h4>
-                <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Home</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>About Us</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Our Services</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Pricing Plan</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Meet The Team</a>
-                    <a class="text-white-50" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Contact Us</a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-uppercase text-white mb-4">Описание</h4>
-                <p class="mb-4">{{ setting.description }}</p>
-                <div class="w-100 mb-3">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Your Email">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary text-uppercase px-3">Sign Up</button>
-                        </div>
-                    </div>
-                </div>
-                <i>Lorem sit sed elitr sed kasd et</i>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111;">
-        <p class="mb-2 text-center text-white-50">&copy; <a href="#">SkillBox Clone</a>. All Rights Reserved.</p>
-        <p class="m-0 text-center text-white-50">Designed by <a href="https://www.instagram.com/itsaallicho/"></a>itsaallicho</a></p>
-    </div>
-    <!-- Footer End -->
-
+   {% include 'include/footer.html' %}
 
    
 

@@ -1,0 +1,58 @@
+{%load static%}
+ 
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-white position-relative">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
+            <a href="{% url 'index' %}" class="navbar-brand text-secondary">
+                <h1 class="display-4 text-uppercase">{{ setting.title }}</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ml-auto py-0 pr-3 border-right">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">О Нас</a>
+                    <a href="service.html" class="nav-item nav-link">Новости</a>
+                    <a href="price.html" class="nav-item nav-link">Цены</a>
+                    <a href="project.html" class="nav-item nav-link">Проекты</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Связаться с нами</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="team.html" class="dropdown-item">Встреча с командой</a>
+                            <a href="testimonial.html" class="dropdown-item">Отзыв</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Войти</a>
+                </div>
+                <div class="d-none d-lg-flex align-items-center pl-4">
+                    <i class="fa fa-2x fa-mobile-alt text-primary mr-3"></i>
+                    <div>
+                        <h6 class="text-body text-uppercase mb-1"><small>Звоните</small></h6>
+                        <h6 class="m-0">{{ setting.phone }}</h6>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary py-5 px-0" style="margin-bottom: 90px;">
+
+        <div class="row mx-0 align-items-center">
+           
+            <div class="col-lg-6 px-md-5 text-center text-lg-left">
+                <h1 class="display-2 text-uppercase mb-3">ЛУЧШЕЕ ЦИФРОВОЕ МАРКЕТИНГОВОЕ АГЕНТСТВО</h1>
+                <p class="text-dark mb-4">{{ setting.description }}</p>
+                <a href="" class="btn btn-dark text-uppercase mt-1 py-3 px-5">Узнать Больше</a>
+            </div>
+            <div class="col-lg-6 px-0 text-right">
+                <img class="img-fluid mt-5 mt-lg-0" src="{{ it_run_logo.url }}" alt="">
+            </div>
+            
+        </div>
+
+    </div>
+    <!-- Header End -->
