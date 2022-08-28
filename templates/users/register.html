@@ -1,13 +1,41 @@
 {%extends 'homepage.html'%}
 {% load static%}
 {%block content%}
-{% include 'include/header.html' %}
 
-<div class="control-group">
-    <input type="text" class="form-control bg-light border-0 p-4" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
-    <p class="help-block text-danger"></p>
+<div class="cotainer" style="margin-left: 20px;">
+    <div class="row"  style="display: center;">
+<form method="POST" enctype="multipart/form-data" name="sentMessage" id="contactForm"  novalidate="novalidate">
+    <div class="form-row">
+        <div class="col-md-6">
+            <div class="control-group">
+                <input type="text" class="form-control bg-light border-0 p-4" id="name" name = "username" placeholder="Никнейм" required="required" data-validation-required-message="Please enter your name" />
+                <p class="help-block text-danger"></p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="control-group">
+                <input type="email" class="form-control bg-light border-0 p-4" id="email" name = "passwaord1" placeholder="Введите пароль" required="required" data-validation-required-message="Please enter your email" />
+                <p class="help-block text-danger"></p>
+            </div>
+        </div>
+    </div>
+    <div class="control-group">
+        <input type="text" class="form-control bg-light border-0 p-4" id="subject" name="password2" placeholder="Подвердите пароль" required="required" data-validation-required-message="Please enter a subject" />
+        <p class="help-block text-danger"></p>
+    </div>
+    <div class="control-group">
+        <label for="myfile">Фото пользователя</label>
+        <input type="file" id="myfile" name="profile_iamge">
+    </div>
+    <h5>Уже есть аккаунт?<a href="{% url 'login' %}">Войти</a>
+    </h5>
+    <div class="text-center">
+        {% csrf_token %}
+        <button class="btn btn-primary text-uppercase py-3 px-5" type="submit" id="sendMessageButton">Зарегистрироваться</button>
+    </div>
+</form>
 </div>
-
-{% include 'include/footer.html' %}
+</div>
+ 
 
 {%endblock%}

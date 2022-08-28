@@ -23,8 +23,13 @@
                             <a href="testimonial.html" class="dropdown-item">Отзыв</a>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Войти</a>
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'logout' %}" class="nav-item nav-link">Выйти</a>
                 </div>
+                    {% else %}
+                    <a href="{% url 'register' %}" class="nav-item nav-link">Войти</a>
+                </div>
+                    {% endif %}            
                 <div class="d-none d-lg-flex align-items-center pl-4">
                     <i class="fa fa-2x fa-mobile-alt text-primary mr-3"></i>
                     <div>
@@ -46,7 +51,7 @@
             <div class="col-lg-6 px-md-5 text-center text-lg-left">
                 <h1 class="display-2 text-uppercase mb-3">ЛУЧШЕЕ ЦИФРОВОЕ МАРКЕТИНГОВОЕ АГЕНТСТВО</h1>
                 <p class="text-dark mb-4">{{ setting.description }}</p>
-                <a href="" class="btn btn-dark text-uppercase mt-1 py-3 px-5">Узнать Больше</a>
+                <a href="" class="btn btn-dark text-uppercase mt-1 py-3 px-5">Узнать больше</a>
             </div>
             <div class="col-lg-6 px-0 text-right">
                 <img class="img-fluid mt-5 mt-lg-0" src="{{ it_run_logo.url }}" alt="">
