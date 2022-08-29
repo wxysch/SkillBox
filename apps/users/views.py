@@ -16,6 +16,7 @@ def register(request):
                 user = User.objects.create(username = username, profile_image = profile_image)
                 user.set_password(password1)
                 user.save()
+                return redirect('index')
             except:
                 return HttpResponse("Неправильные данные")
         else:
