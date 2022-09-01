@@ -15,6 +15,7 @@ class Language(models.Model):
 
 class Course(models.Model):
     name = models.CharField(max_length=150)
+    course_image = models.ImageField(upload_to = "course_image")
     price = models.IntegerField()
     languages = models.ForeignKey(Language,max_length=255,on_delete=models.CASCADE)
      

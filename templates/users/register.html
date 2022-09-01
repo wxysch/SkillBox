@@ -1,41 +1,82 @@
-{%extends 'homepage.html'%}
-{% load static%}
-{%block content%}
+{% extends 'homepage.html' %}
+{% load static %}
+{% load socialaccount %}
+{% block content %}
+{% include 'include/header.html' %}
 
-<div class="cotainer" style="margin-left: 20px;">
-    <div class="row"  style="display: center;">
-<form method="POST" enctype="multipart/form-data" name="sentMessage" id="contactForm"  novalidate="novalidate">
-    <div class="form-row">
-        <div class="col-md-6">
-            <div class="control-group">
-                <input type="text" class="form-control bg-light border-0 p-4" id="name" name = "username" placeholder="Никнейм" required="required" data-validation-required-message="Please enter your name" />
-                <p class="help-block text-danger"></p>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="control-group">
-                <input type="email" class="form-control bg-light border-0 p-4" id="email" name = "passwaord1" placeholder="Введите пароль" required="required" data-validation-required-message="Please enter your email" />
-                <p class="help-block text-danger"></p>
-            </div>
-        </div>
-    </div>
-    <div class="control-group">
-        <input type="text" class="form-control bg-light border-0 p-4" id="subject" name="password2" placeholder="Подвердите пароль" required="required" data-validation-required-message="Please enter a subject" />
-        <p class="help-block text-danger"></p>
-    </div>
-    <div class="control-group">
-        <label for="myfile">Фото пользователя</label>
-        <input type="file" id="myfile" name="profile_iamge">
-    </div>
-    <h5>Уже есть аккаунт?<a href="{% url 'login' %}">Войти</a>
-    </h5>
-    <div class="text-center">
-        {% csrf_token %}
-        <button class="btn btn-primary text-uppercase py-3 px-5" type="submit" id="sendMessageButton">Зарегистрироваться</button>
-    </div>
-</form>
-</div>
-</div>
- 
 
-{%endblock%}
+<!-- Start main-content -->
+  <div class="main-content">
+
+    <!-- Section: inner-header -->
+    <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img="images/bg/bg3.jpg">
+      <div class="container pt-70 pb-20">
+        <!-- Section Content -->
+        <div class="section-content">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="title text-white">My Account</h2>
+              <ol class="breadcrumb text-left text-black mt-10">
+                <li><a href="form-register-style1.html#">Home</a></li>
+                <li><a href="form-register-style1.html#">Pages</a></li>
+                <li class="active text-gray-silver">Page Title</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-push-3">
+            <form name="reg-form" class="register-form" method="post">
+              <div class="icon-box mb-0 p-0">
+                <a href="form-register-style1.html#" class="icon icon-bordered icon-rounded icon-sm pull-left mb-0 mr-10">
+                  <i class="pe-7s-users"></i>
+                </a>
+                <h4 class="text-gray pt-10 mt-0 mb-30">Don't have an Account? Register Now.</h4>
+              </div>
+              <hr>
+              <p class="text-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi id perspiciatis facilis nulla possimus quasi, amet qui. Ea rerum officia, aspernatur nulla neque nesciunt alias.</p>
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="form_name">Name</label>
+                  <input name="form_name" class="form-control" type="text">
+                </div>
+                <div class="form-group col-md-6">
+                  <label>Email Address</label>
+                  <input name="form_email" class="form-control" type="email">
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-md-12">
+                  <label for="form_choose_username">Choose Username</label>
+                  <input id="form_choose_username" name="form_choose_username" class="form-control" type="text">
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="form_choose_password">Choose Password</label>
+                  <input id="form_choose_password" name="form_choose_password" class="form-control" type="text">
+                </div>
+                <div class="form-group col-md-6">
+                  <label>Re-enter Password</label>
+                  <input id="form_re_enter_password" name="form_re_enter_password"  class="form-control" type="text">
+                </div>
+              </div>
+              <div class="form-group">
+                {% csrf_token %}
+                <button class="btn btn-dark btn-lg btn-block mt-15" type="submit">Register Now</button>
+                <a class="btn btn-dark btn-lg btn-block no-border mt-15 mb-15" href="{% provider_login_url 'google' %}" data-bg-color="#3b5998">Login google</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- end main-content -->
+  {% include 'include/footer.html' %}
+{% endblock %}

@@ -1,33 +1,58 @@
-{%extends 'homepage.html'%}
-{% load static%}
-{%block content%}
-
-<div class="cotainer" style="margin-left:15px ;">
-    <div class="row"  style="display: center;">
-<form name="sentMessage" id="contactForm" novalidate="novalidate">
-    <div class="form-row">
-        <div class="col-md-6">
-            <div class="control-group">
-                <input type="text" class="form-control bg-light border-0 p-4" id="name" name="username" placeholder="Никнейм" required="required" data-validation-required-message="Please enter your name" />
-                <p class="help-block text-danger"></p>
+{% extends 'homepage.html' %}
+{% load static %}
+{% load socialaccount %}
+{% block content %}
+{% include 'include/header.html' %}
+  
+  <!-- start main-content -->
+  <div class="main-content"> 
+    <!-- Section: home -->
+    <section id="home" class="divider parallax fullscreen layer-overlay overlay-white-9" data-bg-img="images/bg/bg1.jpg">
+      <div class="display-table">
+        <div class="display-table-cell">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-md-push-3">
+                <div class="text-center mb-60"><a href="form-login-style2.html#" class=""><img alt="" src="images/logo-wide.png"></a></div>
+                <h4 class="text-theme-colored mt-0 pt-5"> Login</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                <form name="login-form" class="form-transparent clearfix">
+                  <div class="row">
+                    <div class="form-group col-md-12">
+                      <label for="form_username_email">Username/Email</label>
+                      <input id="form_username_email" name="form_username_email" class="form-control" type="text">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-md-12">
+                      <label for="form_password">Password</label>
+                      <input id="form_password" name="form_password" class="form-control" type="text">
+                    </div>
+                  </div>
+                  <div class="checkbox pull-left mt-15">
+                    <label for="form_checkbox">
+                      <input id="form_checkbox" name="form_checkbox" type="checkbox">
+                      Remember me </label>
+                  </div>
+                  <div class="form-group pull-right mt-10">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-dark btn-sm">Login</button>
+                  </div>
+                  <div class="clear text-center pt-10">
+                    <a class="text-theme-colored font-weight-600 font-12" href="form-login-style2.html#">Forgot Your Password?</a>
+                  </div>
+                  <div class="clear text-center pt-10">
+                    <a class="btn btn-dark btn-lg btn-block no-border mt-15 mb-15" href="{% provider_login_url 'google' %}x`" data-bg-color="#3b5998">Login google</a>
+                  </div>
+                </form>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="col-md-6">
-            <div class="control-group">
-                <input type="email" class="form-control bg-light border-0 p-4" id="email" name="password1" placeholder="Введите пароль" required="required" data-validation-required-message="Please enter your email" />
-                <p class="help-block text-danger"></p>
-            </div>
-        </div>
-    </div>
-    <h5>Если у вас нет аккаунта<a href="{% url 'register' %}">Зарегистрироваться</a>
-    </h5>
-    <div class="text-center">
-        {% csrf_token %}
-        <button class="btn btn-primary text-uppercase py-3 px-5" type="submit" id="sendMessageButton">Войти</button>
-    </div>
-</form>
-</div>
-</div>
- 
+      </div>
+    </section>
+  </div>
+  <!-- end main-content --> 
 
-{%endblock%}
+  {% include 'include/footer.html' %}
+{% endblock %}
