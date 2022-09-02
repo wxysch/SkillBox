@@ -8,17 +8,19 @@ def register(request):
     setting = Setting.objects.latest('id')
     if request.method == "POST":
         username = request.POST.get('username')
+        email = request.POST.get('email')
         password1 = request.POST.get('password1')
         password2 = request.POST.get('password2')
         profile_image = request.FILES.get('profile_image')
         if password1 == password2:
-            try:
-                user = User.objects.create(username = username, profile_image = profile_image)
-                user.set_password(password1)
-                user.save()
-                return redirect('index')
-            except:
-                return HttpResponse("Неправильные данные")
+            user = User.objects.create(username = username, profile_image = profile_image, email = email)
+            user.set_password(password1)
+            user.save()
+            user = User.objects.get(username = username)
+            user = authenticate(username = username, password = password1)
+            login(request, user)
+            return redirect('index')
+           
         else:
             return HttpResponse("Пароли не совпадают")
 
@@ -44,3 +46,4 @@ def user_login(request):
         'setting' : setting,
     }
     return render(request, 'users/login.html', context)
+

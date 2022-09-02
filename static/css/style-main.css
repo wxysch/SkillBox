@@ -1687,7 +1687,7 @@ form textarea:focus {
 }
 .form-transparent .form-control {
   background: transparent;
-  color: #f7f7f7;
+  color: #000;
 }
 .form-transparent .form-control:focus,
 .form-transparent form input[type="text"]:focus,
@@ -1701,7 +1701,7 @@ form textarea:focus {
 .form-transparent form input[type="color"]:focus,
 .form-transparent form select:focus,
 .form-transparent form textarea:focus {
-  color: #f7f7f7;
+  color: #000;
 }
 .form-transparent textarea.form-control,
 .form-white textarea.form-control {

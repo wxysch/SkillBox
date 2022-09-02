@@ -16,17 +16,18 @@
                 <div class="text-center mb-60"><a href="form-login-style2.html#" class=""><img alt="" src="images/logo-wide.png"></a></div>
                 <h4 class="text-theme-colored mt-0 pt-5"> Login</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
-                <form name="login-form" class="form-transparent clearfix">
+                <form name="login-form" method="POST" class="form-transparent clearfix">
+                  {% csrf_token %}
                   <div class="row">
                     <div class="form-group col-md-12">
-                      <label for="form_username_email">Username/Email</label>
-                      <input id="form_username_email" name="form_username_email" class="form-control" type="text">
+                      <label for="form_username_email">Username</label>
+                      <input id="form_username_email" name="username" class="form-control" type="text">
                     </div>
                   </div>
                   <div class="row">
                     <div class="form-group col-md-12">
                       <label for="form_password">Password</label>
-                      <input id="form_password" name="form_password" class="form-control" type="text">
+                      <input id="form_password" name="password" class="form-control" type="password">
                     </div>
                   </div>
                   <div class="checkbox pull-left mt-15">
@@ -35,7 +36,7 @@
                       Remember me </label>
                   </div>
                   <div class="form-group pull-right mt-10">
-                    {% csrf_token %}
+                    
                     <button type="submit" class="btn btn-dark btn-sm">Login</button>
                   </div>
                   <div class="clear text-center pt-10">

@@ -9,7 +9,7 @@
   <div class="main-content">
 
     <!-- Section: inner-header -->
-    <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img="images/bg/bg3.jpg">
+    <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img="{% static 'images/bg/bg3.jpg' %}">
       <div class="container pt-70 pb-20">
         <!-- Section Content -->
         <div class="section-content">
@@ -31,47 +31,61 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-push-3">
-            <form name="reg-form" class="register-form" method="post">
+            <form name="reg-form" class="register-form" method="POST">
+              {% csrf_token %}
               <div class="icon-box mb-0 p-0">
                 <a href="form-register-style1.html#" class="icon icon-bordered icon-rounded icon-sm pull-left mb-0 mr-10">
                   <i class="pe-7s-users"></i>
                 </a>
                 <h4 class="text-gray pt-10 mt-0 mb-30">Don't have an Account? Register Now.</h4>
               </div>
+              <div class="icon-box mb-0 p-0">
+                <a href="form-register-style1.html#" class="icon icon-bordered icon-rounded icon-sm pull-left mb-0 mr-10">
+                  <i class="pe-7s-users"></i>
+                </a>
+                <h4 class="text-gray pt-10 mt-0 mb-30">Already have an Account? <a href="{% url 'login' %}">Login</a></h4>
+              </div>
               <hr>
               <p class="text-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi id perspiciatis facilis nulla possimus quasi, amet qui. Ea rerum officia, aspernatur nulla neque nesciunt alias.</p>
               <div class="row">
-                <div class="form-group col-md-6">
+                <!-- <div class="form-group col-md-6">
                   <label for="form_name">Name</label>
                   <input name="form_name" class="form-control" type="text">
-                </div>
+                </div> -->
                 <div class="form-group col-md-6">
                   <label>Email Address</label>
-                  <input name="form_email" class="form-control" type="email">
+                  <input name="email" class="form-control" type="email">
+                  
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="form_choose_password">Choose profile image</label>
+                  <input id="form_choose_password" name="password1" class="form-control" type="file">
                 </div>
               </div>
               <div class="row">
                 <div class="form-group col-md-12">
                   <label for="form_choose_username">Choose Username</label>
-                  <input id="form_choose_username" name="form_choose_username" class="form-control" type="text">
+                  <input id="form_choose_username" name="username" class="form-control" type="text">
                 </div>
               </div>
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="form_choose_password">Choose Password</label>
-                  <input id="form_choose_password" name="form_choose_password" class="form-control" type="text">
+                  <input id="form_choose_password" name="password1" class="form-control" type="password">
                 </div>
                 <div class="form-group col-md-6">
                   <label>Re-enter Password</label>
-                  <input id="form_re_enter_password" name="form_re_enter_password"  class="form-control" type="text">
+                  <input id="form_re_enter_password" name="password2"  class="form-control" type="password">
                 </div>
               </div>
+              
               <div class="form-group">
-                {% csrf_token %}
+                
                 <button class="btn btn-dark btn-lg btn-block mt-15" type="submit">Register Now</button>
                 <a class="btn btn-dark btn-lg btn-block no-border mt-15 mb-15" href="{% provider_login_url 'google' %}" data-bg-color="#3b5998">Login google</a>
               </div>
-            </form>
           </div>
         </div>
       </div>
