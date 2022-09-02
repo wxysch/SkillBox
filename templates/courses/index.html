@@ -471,66 +471,20 @@
           <div class="row">
             <div class="col-md-12">
               <div class="owl-carousel-4col" data-dots="true">
+                {% for course in courses %}
                 <div class="item ">
                   <div class="service-block bg-white">
-                    <div class="thumb"> <img alt="featured project" src="{% static 'images/project/4.jpg' %}" class="img-fullwidth">
+                    <div class="thumb"> <img alt="featured project" src="{{ course.course_image.url }}" class="img-fullwidth">
                     <h4 class="text-white mt-0 mb-0"><span class="price">$125</span></h4>
                     </div>
                     <div class="content text-left flip p-25 pt-0">
-                      <h4 class="line-bottom mb-10">Accounting Technologies</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam ipsum quis ipsum facilisis sit amet.</p>
-                     <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="page-courses-accounting-technologies.html">view details</a>
+                      <h4 class="line-bottom mb-10">{{ course.name }}</h4>
+                      <p>{{ course.languages }}</p>
+                     <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="{% url 'course_detail' course.id %}">view details</a>
                     </div>
                   </div>
                 </div>
-                <div class="item">
-                  <div class="service-block mb-md-30 bg-white">
-                    <div class="thumb"> <img alt="featured project" src="{% static 'images/project/5.jpg' %}" class="img-responsive img-fullwidth">
-                    <h4 class="text-white mt-0 mb-0"><span class="price">$125</span></h4>
-                    </div>
-                    <div class="content text-left flip p-25 pt-0">
-                      <h4 class="line-bottom mb-10">Computer Technologies</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam ipsum quis ipsum facilisis sit amet.</p>
-                     <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="page-courses-accounting-technologies.html">view details</a>
-                   </div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="service-block mb-md-30 bg-white">
-                    <div class="thumb"> <img alt="featured project" src="{% static 'images/project/6.jpg' %}" class="img-responsive img-fullwidth">
-                    <h4 class="text-white mt-0 mb-0"><span class="price">$125</span></h4>
-                    </div>
-                    <div class="content text-left flip p-25 pt-0">
-                      <h4 class="line-bottom mb-10">Development Studies</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam ipsum quis ipsum facilisis sit amet.</p>
-                     <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="page-courses-accounting-technologies.html">view details</a>
-                   </div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="service-block mb-md-30 bg-white">
-                    <div class="thumb"> <img alt="featured project" src="{% static 'images/project/7.jpg' %}" class="img-responsive img-fullwidth">
-                    <h4 class="text-white mt-0 mb-0"><span class="price">$125</span></h4>
-                    </div>
-                    <div class="content text-left flip p-25 pt-0">
-                      <h4 class="line-bottom mb-10">Electrical & Electronic</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam ipsum quis ipsum facilisis sit amet.</p>
-                      <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="page-courses-accounting-technologies.html">view details</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="service-block mb-md-30 bg-white">
-                    <div class="thumb"> <img alt="featured project" src="{% static 'images/project/8.jpg' %}" class="img-responsive img-fullwidth">
-                    <h4 class="text-white mt-0 mb-0"><span class="price">$125</span></h4>
-                    </div>
-                    <div class="content text-left flip p-25 pt-0">
-                      <h4 class="line-bottom mb-10">Chemical Engineering</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam ipsum quis ipsum facilisis sit amet.</p>
-                      <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="page-courses-accounting-technologies.html">view details</a>
-                    </div>
-                  </div>
-                </div>
+                {% endfor %}
               </div>
             </div>
           </div>
@@ -737,12 +691,12 @@
                     <div class="icons-holder">
                       <div class="icons-holder-inner">
                         <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
-                          <a data-lightbox="image" href="{% static 'images/gallery/4.jpg"' %}><i class="fa fa-plus"></i></a>
+                          <a data-lightbox="image" href="{% static 'images/gallery/4.jpg' %}"><i class="fa fa-plus"></i></a>
                           <a href="index-boxed-mp-layout1.html#"><i class="fa fa-link"></i></a>
                         </div>
                       </div>
                     </div>
-                    <a class="hover-link" data-lightbox="image" href="{% static 'images/gallery/4.jpg"' %}>View more</a>
+                    <a class="hover-link" data-lightbox="image" href="{% static 'images/gallery/4.jpg' %}">View more</a>
                   </div>
                 </div>
                 <!-- Portfolio Item End -->
@@ -755,12 +709,12 @@
                     <div class="icons-holder">
                       <div class="icons-holder-inner">
                         <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
-                          <a data-lightbox="image" href="{% static 'images/gallery/5.jpg"' %}><i class="fa fa-plus"></i></a>
+                          <a data-lightbox="image" href="{% static 'images/gallery/5.jpg' %}"><i class="fa fa-plus"></i></a>
                           <a href="index-boxed-mp-layout1.html#"><i class="fa fa-link"></i></a>
                         </div>
                       </div>
                     </div>
-                    <a class="hover-link" data-lightbox="image" href="{% static 'images/gallery/5.jpg"' %}>View more</a>
+                    <a class="hover-link" data-lightbox="image" href="{% static 'images/gallery/5.jpg'%}">View more</a>
                   </div>
                 </div>
                 <!-- Portfolio Item End -->
@@ -773,12 +727,12 @@
                     <div class="icons-holder">
                       <div class="icons-holder-inner">
                         <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
-                          <a data-lightbox="image" href="{% static 'images/gallery/6.jpg"' %}><i class="fa fa-plus"></i></a>
+                          <a data-lightbox="image" href="{% static 'images/gallery/6.jpg' %}"><i class="fa fa-plus"></i></a>
                           <a href="index-boxed-mp-layout1.html#"><i class="fa fa-link"></i></a>
                         </div>
                       </div>
                     </div>
-                    <a class="hover-link" data-lightbox="image" href="{% static 'images/gallery/6.jpg"' %}>View more</a>
+                    <a class="hover-link" data-lightbox="image" href="{% static 'images/gallery/6.jpg' %}">View more</a>
                   </div>
                 </div>
                 <!-- Portfolio Item End -->
@@ -791,12 +745,12 @@
                     <div class="icons-holder">
                       <div class="icons-holder-inner">
                         <div class="styled-icons icon-sm icon-dark icon-circled icon-theme-colored">
-                          <a data-lightbox="image" href="{% static 'images/gallery/7.jpg"' %}><i class="fa fa-plus"></i></a>
+                          <a data-lightbox="image" href="{% static 'images/gallery/7.jpg' %}"><i class="fa fa-plus"></i></a>
                           <a href="index-boxed-mp-layout1.html#"><i class="fa fa-link"></i></a>
                         </div>
                       </div>
                     </div>
-                    <a class="hover-link" data-lightbox="image" href="{% static 'images/gallery/7.jpg"' %}>View more</a>
+                    <a class="hover-link" data-lightbox="image" href="{% static 'images/gallery/7.jpg' %}">View more</a>
                   </div>
                 </div>
                 <!-- Portfolio Item End -->
@@ -907,7 +861,7 @@
             <div class="col-md-6">
               <h3 class="text-uppercase line-bottom mt-0 line-height-1"><i class="fa fa-calendar mr-10"></i>Upcoming <span class="text-theme-color-2">Events</span></h3>
               <article class="post media-post clearfix pb-0 mb-10">
-                <a href="index-boxed-mp-layout1.html#" class="post-thumb mr-20"><img alt="" src="images/event/1.jpg"></a>
+                <a href="index-boxed-mp-layout1.html#" class="post-thumb mr-20"><img alt="" src="{% static 'images/event/1.jpg' %}"></a>
                 <div class="post-right">
                   <h4 class="mt-0 mb-5"><a href="index-boxed-mp-layout1.html#">Upcoming Event Title</a></h4>
                   <ul class="list-inline font-12 mb-5">
@@ -919,7 +873,7 @@
                 </div>
               </article>
               <article class="post media-post clearfix pb-0 mb-10">
-                <a href="index-boxed-mp-layout1.html#" class="post-thumb mr-20"><img alt="" src="images/event/2.jpg"></a>
+                <a href="index-boxed-mp-layout1.html#" class="post-thumb mr-20"><img alt="" src="{% static 'images/event/2.jpg' %}"></a>
                 <div class="post-right">
                   <h4 class="mt-0 mb-5"><a href="index-boxed-mp-layout1.html#">Upcoming Event Title</a></h4>
                   <ul class="list-inline font-12 mb-5">
@@ -931,7 +885,7 @@
                 </div>
               </article>
               <article class="post media-post clearfix pb-0 mb-10">
-                <a href="index-boxed-mp-layout1.html#" class="post-thumb mr-20"><img alt="" src="images/event/3.jpg"></a>
+                <a href="index-boxed-mp-layout1.html#" class="post-thumb mr-20"><img alt="" src="{% static 'images/event/3.jpg' %}"></a>
                 <div class="post-right">
                   <h4 class="mt-0 mb-5"><a href="index-boxed-mp-layout1.html#">Upcoming Event Title</a></h4>
                   <ul class="list-inline font-12 mb-5">
@@ -1187,5 +1141,5 @@
   <!-- end main-content -->
   </div>
 
-
+  {% include 'include/footer.html' %}
 {% endblock %}
