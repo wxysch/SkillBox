@@ -6,11 +6,11 @@
         <div class="col-sm-6 col-md-3">
           <div class="widget dark">
             <img class="mt-5 mb-20" alt="" src="images/logo-white-footer.png">
-            <p>203, Envato Labs, Behind Alis Steet, Melbourne, Australia.</p>
+            <p>{{ setting.address }}</p>
             <ul class="list-inline mt-5">
-              <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-theme-color-2 mr-5"></i> <a class="text-gray" href="index-boxed-mp-layout1.html#">123-456-789</a> </li>
-              <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-theme-color-2 mr-5"></i> <a class="text-gray" href="index-boxed-mp-layout1.html#">contact@yourdomain.com</a> </li>
-              <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe text-theme-color-2 mr-5"></i> <a class="text-gray" href="index-boxed-mp-layout1.html#">www.yourdomain.com</a> </li>
+              <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-theme-color-2 mr-5"></i> <a class="text-gray" href="index-boxed-mp-layout1.html#">{{ setting.phone }}</a> </li>
+              <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-theme-color-2 mr-5"></i> <a class="text-gray" href="index-boxed-mp-layout1.html#">{{ setting.email }}</a> </li>
+              <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe text-theme-color-2 mr-5"></i> <a class="text-gray" href="https://www.instagram.com/itsaallicho/">itsaallicho</a> </li>
             </ul>
           </div>
         </div>
@@ -19,18 +19,15 @@
             <h4 class="widget-title">Useful Links</h4>
             <ul class="list angle-double-right list-border">
               <li><a href="page-about-style1.html">About Us</a></li>
-              <li><a href="page-course-list.html">Our Courses</a></li>
-              <li><a href="page-pricing-style1.html">Pricing Table</a></li>
-              <li><a href="page-gallery-3col.html">Gallery</a></li>
-              <li><a href="shop-category.html">Shop</a></li>              
+                           
             </ul>
           </div>
         </div>
         <div class="col-sm-6 col-md-3">
-          <div class="widget dark">
+          <!-- <div class="widget dark">
             <h4 class="widget-title">Twitter Feed</h4>
             <div class="twitter-feed list-border clearfix" data-username="Envato" data-count="2"></div>
-          </div>
+          </div> -->
         </div>
         <div class="col-sm-6 col-md-3">
           <div class="widget dark">
@@ -38,13 +35,16 @@
             <div class="opening-hours">
               <ul class="list-border">
                 <li class="clearfix"> <span> Mon - Tues :  </span>
-                  <div class="value pull-right"> 6.00 am - 10.00 pm </div>
+                  <div class="value pull-right"> 8.00 am - 9.00 pm </div>
                 </li>
                 <li class="clearfix"> <span> Wednes - Thurs :</span>
-                  <div class="value pull-right"> 8.00 am - 6.00 pm </div>
+                  <div class="value pull-right"> 8.00 am - 9.00 pm </div>
                 </li>
                 <li class="clearfix"> <span> Fri : </span>
-                  <div class="value pull-right"> 3.00 pm - 8.00 pm </div>
+                  <div class="value pull-right"> 8.00 am - 9.00 pm </div>
+                </li>
+                <li class="clearfix"> <span> Saturday : </span>
+                  <div class="value pull-right"> 8.00 am - 9.00 pm </div>
                 </li>
                 <li class="clearfix"> <span> Sun : </span>
                   <div class="value pull-right"> Closed </div>
@@ -59,8 +59,7 @@
           <div class="widget dark">
             <h5 class="widget-title mb-10">Call Us Now</h5>
             <div class="text-gray">
-              +61 3 1234 5678 <br>
-              +12 3 1234 5678
+             {{ setting.phone }}<br>
             </div>
           </div>
         </div>
@@ -68,12 +67,12 @@
           <div class="widget dark">
             <h5 class="widget-title mb-10">Connect With Us</h5>
             <ul class="styled-icons icon-bordered icon-sm">
-              <li><a href="index-boxed-mp-layout1.html#"><i class="fa fa-facebook"></i></a></li>
+              <!--<li><a href="index-boxed-mp-layout1.html#"><i class="fa fa-facebook"></i></a></li>
               <li><a href="index-boxed-mp-layout1.html#"><i class="fa fa-twitter"></i></a></li>
               <li><a href="index-boxed-mp-layout1.html#"><i class="fa fa-skype"></i></a></li>
-              <li><a href="index-boxed-mp-layout1.html#"><i class="fa fa-youtube"></i></a></li>
-              <li><a href="index-boxed-mp-layout1.html#"><i class="fa fa-instagram"></i></a></li>
-              <li><a href="index-boxed-mp-layout1.html#"><i class="fa fa-pinterest"></i></a></li>
+              <li><a href="index-boxed-mp-layout1.html#"><i class="fa fa-youtube"></i></a></li> -->
+              <li><a href="https://www.instagram.com/itrun.osh/"><i class="fa fa-instagram"></i></a></li>
+              <!-- <li><a href="index-boxed-mp-layout1.html#"><i class="fa fa-pinterest"></i></a></li> -->
             </ul>
           </div>
         </div>

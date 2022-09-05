@@ -439,16 +439,16 @@
         <div class="section-content">
           <div class="row">
             <div class="col-md-6">
-              <h6 class="letter-space-4 text-gray-darkgray text-uppercase mt-0 mb-0">All About</h6>
-              <h2 class="text-uppercase font-weight-600 mt-0 font-28 line-bottom">The World’s Best Education in Our University</h2>
-              <h4 class="text-theme-colored">Lorem ipsum dolor sit amet soluta saepe odit error, maxime praesentium sunt udiandae!</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore atque officiis maxime suscipit expedita obcaecati nulla in ducimus iure quos quam recusandae dolor quas et perspiciatis voluptatum accusantium delectus nisi reprehenderit, eveniet fuga modi pariatur, eius vero. Ea vitae maiores.</p>
-              <a class="btn btn-theme-colored btn-flat btn-lg mt-10 mb-sm-30" href="index-boxed-mp-layout1.html#">Know More →</a>
+              <!-- <h6 class="letter-space-4 text-gray-darkgray text-uppercase mt-0 mb-0">All About</h6> -->
+              <h2 class="text-uppercase font-weight-600 mt-0 font-28 line-bottom">отзывы от наших учеников</h2>
+              <h4 class="text-theme-colored">Всем привет, на связи IT-RUN!</h4>
+              <p>Хотим поделиться с вами успехами наших студентов, их первым заработком, благодаря нам и нашим курсам!</p>
+              <a class="btn btn-theme-colored btn-flat btn-lg mt-10 mb-sm-30" href="index-boxed-mp-layout1.html#">Нажмите на картинку →</a>
             </div>
             <div class="col-md-6">
               <div class="video-popup">                
-                <a href="https://www.youtube.com/watch?v=pW1uVUg5wXM" data-lightbox-gallery="youtube-video" title="Video">
-                  <img alt="" src="{% static 'images/about/5.jpg' %}" class="img-responsive img-fullwidth">
+                <a href="https://www.instagram.com/p/CbZaNvSg9F5/" data-lightbox-gallery="youtube-video" title="Video">
+                  <img alt="" src="{% static 'images/blog/it-run-review.png' %}" class="img-responsive img-fullwidth">
                 </a>
               </div>
             </div>
@@ -463,7 +463,7 @@
         <div class="section-title mb-10">
         <div class="row">
           <div class="col-md-8">
-            <h2 class="mt-0 text-uppercase font-28 line-bottom line-height-1">Our <span class="text-theme-color-2 font-weight-400">COURSES</span></h2>
+            <h2 class="mt-0 text-uppercase font-28 line-bottom line-height-1">Наши <span class="text-theme-color-2 font-weight-400">курсы </span></h2>
          </div>
         </div>
         </div>
@@ -475,12 +475,12 @@
                 <div class="item ">
                   <div class="service-block bg-white">
                     <div class="thumb"> <img alt="featured project" src="{{ course.course_image.url }}" class="img-fullwidth">
-                    <h4 class="text-white mt-0 mb-0"><span class="price">{{ course.pricex  }}</span></h4>
+                    <h4 class="text-white mt-0 mb-0"><span class="price">{{ course.price  }}</span></h4>
                     </div>
                     <div class="content text-left flip p-25 pt-0">
                       <h4 class="line-bottom mb-10">{{ course.name }}</h4>
                       <p>{{ course.languages }}</p>
-                     <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="{% url 'course_detail' course.id %}">view details</a>
+                     <a class="btn btn-dark btn-theme-colored btn-sm text-uppercase mt-10" href="{% url 'course_detail' course.id %}">ХОЧУ!</a>
                     </div>
                   </div>
                 </div>
@@ -499,29 +499,29 @@
           <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
             <div class="funfact text-center">
               <i class="pe-7s-smile mt-5 text-theme-color-2"></i>
-              <h2 data-animation-duration="2000" data-value="5248" class="animate-number text-white mt-0 font-38 font-weight-500">0</h2>
-              <h5 class="text-white text-uppercase mb-0">Happy Students</h5>
+              <h2 data-animation-duration="2000" data-value="5240" class="animate-number text-white mt-0 font-38 font-weight-500">0</h2>
+              <h5 class="text-white text-uppercase mb-0">Счастливыx студентoB</h5>
             </div>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
             <div class="funfact text-center">
               <i class="pe-7s-note2 mt-5 text-theme-color-2"></i>
               <h2 data-animation-duration="2000" data-value="675" class="animate-number text-white mt-0 font-38 font-weight-500">0</h2>
-              <h5 class="text-white text-uppercase mb-0">Our Courses</h5>
+              <h5 class="text-white text-uppercase mb-0">Проданныx курсoB</h5>
             </div>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
             <div class="funfact text-center">
               <i class="pe-7s-users mt-5 text-theme-color-2"></i>
-              <h2 data-animation-duration="2000" data-value="248" class="animate-number text-white mt-0 font-38 font-weight-500">0</h2>
-              <h5 class="text-white text-uppercase mb-0">Our Teachers</h5>
+              <h2 data-animation-duration="2000" data-value="15" class="animate-number text-white mt-0 font-38 font-weight-500">0</h2>
+              <h5 class="text-white text-uppercase mb-0">учителей</h5>
             </div>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-3 mb-md-0">
             <div class="funfact text-center">
               <i class="pe-7s-cup mt-5 text-theme-color-2"></i>
-              <h2 data-animation-duration="2000" data-value="24" class="animate-number text-white mt-0 font-38 font-weight-500">0</h2>
-              <h5 class="text-white text-uppercase mb-0">Awards Won</h5>
+              <h2 data-animation-duration="2000" data-value="5" class="animate-number text-white mt-0 font-38 font-weight-500">0</h2>
+              <h5 class="text-white text-uppercase mb-0">ВЫИГРАННЫX НАГРАД</h5>
             </div>
           </div>
         </div>
@@ -534,72 +534,27 @@
         <div class="section-title mb-10">
           <div class="row">
             <div class="col-md-8">
-              <h2 class="mt-0 text-uppercase font-28 line-bottom line-height-1">Our <span class="text-theme-color-2 font-weight-400">Teachers</span></h2>
+              <h2 class="mt-0 text-uppercase font-28 line-bottom line-height-1">Преподавательский <span class="text-theme-color-2 font-weight-400">состав</span></h2>
            </div>
           </div>
         </div>
         <div class="section-content">
           <div class="row multi-row-clearfix">
+            {% for teacher in teachers %}
             <div class="col-sm-6 col-md-3 sm-text-center mb-sm-30">
               <div class="team maxwidth400">
-                <div class="thumb"><img class="img-fullwidth" src="{% static 'images/team/team5.jpg' %}" alt=""></div>
+                <div class="thumb"><img class="img-fullwidth" src="{{ teacher.photo.url }}" alt=""></div>
                 <div class="content border-1px border-bottom-theme-color-2-2px p-15 bg-light clearfix">
-                  <h4 class="name text-theme-color-2 mt-0">Andre Smith - <small>Teacher</small></h4>
-                  <p class="mb-20">Lorem ipsum dolor sit amet, con amit sectetur adipisicing elit.</p>
+                  <h4 class="name text-theme-color-2 mt-0">{{ teacher.name }} - <small>{{ teacher.job_title }}</small></h4>
+                  <p class="mb-20">{{ teacher.bio }}</p>
                   <ul class="styled-icons icon-dark icon-circled icon-theme-colored icon-sm pull-left flip">
-                    <li><a href="index-boxed-mp-layout1.html#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="index-boxed-mp-layout1.html#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="index-boxed-mp-layout1.html#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="{{ teacher.url }}"><i class="fa fa-instagram"></i></a></li>
                   </ul>
                   <a class="btn btn-theme-colored btn-sm pull-right flip" href="page-teachers-details.html">view details</a>
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-md-3 sm-text-center mb-sm-30">
-              <div class="team maxwidth400">
-                <div class="thumb"><img class="img-fullwidth" src="{% static 'images/team/team6.jpg' %}" alt=""></div>
-                <div class="content border-1px border-bottom-theme-color-2-2px p-15 bg-light clearfix">
-                  <h4 class="name mt-0 text-theme-color-2">Sakib Smith - <small>Teacher</small></h4>
-                  <p class="mb-20">Lorem ipsum dolor sit amet, con amit sectetur adipisicing elit.</p>
-                  <ul class="styled-icons icon-dark icon-circled icon-theme-colored icon-sm pull-left flip">
-                    <li><a href="index-boxed-mp-layout1.html#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="index-boxed-mp-layout1.html#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="index-boxed-mp-layout1.html#"><i class="fa fa-google-plus"></i></a></li>
-                  </ul>
-                  <a class="btn btn-theme-colored btn-sm pull-right flip" href="page-teachers-details.html">view details</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-3 sm-text-center mb-sm-30">
-              <div class="team maxwidth400">
-                <div class="thumb"><img class="img-fullwidth" src="{% static 'images/team/team7.jpg' %}" alt=""></div>
-                <div class="content border-1px border-bottom-theme-color-2-2px p-15 bg-light clearfix">
-                  <h4 class="name mt-0 text-theme-color-2">David Zakaria - <small>Teacher</small></h4>
-                  <p class="mb-20">Lorem ipsum dolor sit amet, con amit sectetur adipisicing elit.</p>
-                  <ul class="styled-icons icon-dark icon-circled icon-theme-colored icon-sm pull-left flip">
-                    <li><a href="index-boxed-mp-layout1.html#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="index-boxed-mp-layout1.html#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="index-boxed-mp-layout1.html#"><i class="fa fa-google-plus"></i></a></li>
-                  </ul>
-                  <a class="btn btn-theme-colored btn-sm pull-right flip" href="page-teachers-details.html">view details</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-3 sm-text-center">
-              <div class="team maxwidth400">
-                <div class="thumb"><img class="img-fullwidth" src="{% static 'images/team/team8.jpg' %}" alt=""></div>
-                <div class="content border-1px border-bottom-theme-color-2-2px p-15 bg-light clearfix">
-                  <h4 class="name mt-0 text-theme-color-2">Ismail Jon - <small>Teacher</small></h4>
-                  <p class="mb-20">Lorem ipsum dolor sit amet, con amit sectetur adipisicing elit.</p>
-                  <ul class="styled-icons icon-dark icon-circled icon-theme-colored icon-sm pull-left flip">
-                    <li><a href="index-boxed-mp-layout1.html#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="index-boxed-mp-layout1.html#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="index-boxed-mp-layout1.html#"><i class="fa fa-google-plus"></i></a></li>
-                  </ul>
-                  <a class="btn btn-theme-colored btn-sm pull-right flip" href="page-teachers-details.html">view details</a>
-                </div>
-              </div>
-            </div>
+            {% endfor %}
           </div>
         </div>
       </div>
@@ -611,7 +566,7 @@
         <div class="section-title mb-10">
           <div class="row">
             <div class="col-md-12">
-              <h2 class="mt-0 text-uppercase text-theme-colored title line-bottom line-height-1">Our<span class="text-theme-color-2 font-weight-400"> Gllery</span></h2>
+              <h2 class="mt-0 text-uppercase text-theme-colored title line-bottom line-height-1">Наша<span class="text-theme-color-2 font-weight-400"> Галерея</span></h2>
             </div>
           </div>
         </div>
@@ -620,10 +575,7 @@
             <div class="col-md-12">
               <!-- Works Filter -->
               <div class="portfolio-filter font-alt align-center">
-                <a href="index-boxed-mp-layout1.html#" class="active" data-filter="*">All</a>
-                <a href="index-boxed-mp-layout1.html#select1" class="" data-filter=".select1">Photos</a>
-                <a href="index-boxed-mp-layout1.html#select2" class="" data-filter=".select2">Campus</a>
-                <a href="index-boxed-mp-layout1.html#select3" class="" data-filter=".select3">Students</a>
+                <a href="index-boxed-mp-layout1.html#" class="active" data-filter="*">ВСЕ</a>
               </div>
               <!-- End Works Filter -->
               
@@ -859,58 +811,21 @@
         <div class="section-content">
           <div class="row">
             <div class="col-md-6">
-              <h3 class="text-uppercase line-bottom mt-0 line-height-1"><i class="fa fa-calendar mr-10"></i>Upcoming <span class="text-theme-color-2">Events</span></h3>
-              <article class="post media-post clearfix pb-0 mb-10">
-                <a href="index-boxed-mp-layout1.html#" class="post-thumb mr-20"><img alt="" src="{% static 'images/event/1.jpg' %}"></a>
-                <div class="post-right">
-                  <h4 class="mt-0 mb-5"><a href="index-boxed-mp-layout1.html#">Upcoming Event Title</a></h4>
-                  <ul class="list-inline font-12 mb-5">
-                    <li class="pr-0"><i class="fa fa-calendar mr-5"></i> June 26, 2016 |</li>
-                    <li class="pl-5"><i class="fa fa-map-marker mr-5"></i>New York</li>
-                  </ul>
-                  <p class="mb-0 font-13">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas eveniet, nemo dicta. Ullam nam.</p>
-                  <a class="text-theme-colored font-13" href="index-boxed-mp-layout1.html#">Read More →</a>
-                </div>
-              </article>
-              <article class="post media-post clearfix pb-0 mb-10">
-                <a href="index-boxed-mp-layout1.html#" class="post-thumb mr-20"><img alt="" src="{% static 'images/event/2.jpg' %}"></a>
-                <div class="post-right">
-                  <h4 class="mt-0 mb-5"><a href="index-boxed-mp-layout1.html#">Upcoming Event Title</a></h4>
-                  <ul class="list-inline font-12 mb-5">
-                    <li class="pr-0"><i class="fa fa-calendar mr-5"></i> June 26, 2016 |</li>
-                    <li class="pl-5"><i class="fa fa-map-marker mr-5"></i>New York</li>
-                  </ul>
-                  <p class="mb-0 font-13">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas eveniet, nemo dicta. Ullam nam.</p>
-                  <a class="text-theme-colored font-13" href="index-boxed-mp-layout1.html#">Read More →</a>
-                </div>
-              </article>
-              <article class="post media-post clearfix pb-0 mb-10">
-                <a href="index-boxed-mp-layout1.html#" class="post-thumb mr-20"><img alt="" src="{% static 'images/event/3.jpg' %}"></a>
-                <div class="post-right">
-                  <h4 class="mt-0 mb-5"><a href="index-boxed-mp-layout1.html#">Upcoming Event Title</a></h4>
-                  <ul class="list-inline font-12 mb-5">
-                    <li class="pr-0"><i class="fa fa-calendar mr-5"></i> June 26, 2016 |</li>
-                    <li class="pl-5"><i class="fa fa-map-marker mr-5"></i>New York</li>
-                  </ul>
-                  <p class="mb-0 font-13">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas eveniet, nemo dicta. Ullam nam.</p>
-                  <a class="text-theme-colored font-13" href="index-boxed-mp-layout1.html#">Read More →</a>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-6">
-              <h3 class="line-bottom mt-0 line-height-1">Why <span class="text-theme-color-2">Choose Us?</span></h3>
-              <p class="mb-10">The Cweren Law Firm is a recognized leader in landlord tenant representation throughout Texas.The largest professional property.</p>
+              <h3 class="line-bottom mt-0 line-height-1">Почему <span class="text-theme-color-2">Мы?</span></h3>
+              <p class="mb-10">Самая крупная академия программирования в Оше
+                Освой программирование  за 6 месяцев 
+                по методике IT-RUN в Оше</p>
               <div id="accordion1" class="panel-group accordion">
                 <div class="panel">
-                  <div class="panel-title"> <a class="active" data-parent="#accordion1" data-toggle="collapse" href="index-boxed-mp-layout1.html#accordion11" aria-expanded="true"> <span class="open-sub"></span> Why this Company is Best?</a> </div>
+                  <div class="panel-title"> <a class="active" data-parent="#accordion1" data-toggle="collapse" href="index-boxed-mp-layout1.html#accordion11" aria-expanded="true"> <span class="open-sub"></span> Почему наша компания лучшая?</a> </div>
                   <div id="accordion11" class="panel-collapse collapse in" role="tablist" aria-expanded="true">
                     <div class="panel-content">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit quae repellendus provident dolor iure poss imusven am aliquam. Officiis totam ea laborum deser unt vonsess.  iure poss imusven am aliquam</p>
+                      <p>Что вы получите обучаясь в академии IT-RUN?</p>
                     </div>
                   </div>
                 </div>
                 <div class="panel">
-                  <div class="panel-title"> <a data-parent="#accordion1" data-toggle="collapse" href="index-boxed-mp-layout1.html#accordion12" class="" aria-expanded="true"> <span class="open-sub"></span> Why this Company is Best?</a> </div>
+                  <div class="panel-title"> <a data-parent="#accordion1" data-toggle="collapse" href="index-boxed-mp-layout1.html#accordion12" class="" aria-expanded="true"> <span class="open-sub"></span>Стажировка в местных IT компаниях</a> </div>
                   <div id="accordion12" class="panel-collapse collapse" role="tablist" aria-expanded="true">
                     <div class="panel-content">
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit quae repellendus provident dolor iure poss imusven am aliquam. Officiis totam ea laborum deser unt vonsess.  iure poss imusven am aliquam</p>
@@ -918,7 +833,7 @@
                   </div>
                 </div>
                 <div class="panel">
-                  <div class="panel-title"> <a data-parent="#accordion1" data-toggle="collapse" href="index-boxed-mp-layout1.html#accordion13" class="" aria-expanded="true"> <span class="open-sub"></span> Why this Company is Best?</a> </div>
+                  <div class="panel-title"> <a data-parent="#accordion1" data-toggle="collapse" href="index-boxed-mp-layout1.html#accordion13" class="" aria-expanded="true"> <span class="open-sub"></span> Авторская методика обучения</a> </div>
                   <div id="accordion13" class="panel-collapse collapse" role="tablist" aria-expanded="true">
                     <div class="panel-content">
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit quae repellendus provident dolor iure poss imusven am aliquam. Officiis totam ea laborum deser unt vonsess.  iure poss imusven am aliquam</p>
@@ -926,7 +841,7 @@
                   </div>
                 </div>
                 <div class="panel">
-                  <div class="panel-title"> <a data-parent="#accordion1" data-toggle="collapse" href="index-boxed-mp-layout1.html#accordion14" class="" aria-expanded="true"> <span class="open-sub"></span> Why this Company is Best?</a> </div>
+                  <div class="panel-title"> <a data-parent="#accordion1" data-toggle="collapse" href="index-boxed-mp-layout1.html#accordion14" class="" aria-expanded="true"> <span class="open-sub"></span> Сертифицированные преподаватели</a> </div>
                   <div id="accordion14" class="panel-collapse collapse" role="tablist" aria-expanded="true">
                     <div class="panel-content">
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit quae repellendus provident dolor iure poss imusven am aliquam. Officiis totam ea laborum deser unt vonsess.  iure poss imusven am aliquam</p>
@@ -934,7 +849,7 @@
                   </div>
                 </div>
                 <div class="panel">
-                  <div class="panel-title"> <a data-parent="#accordion1" data-toggle="collapse" href="index-boxed-mp-layout1.html#accordion15" class="" aria-expanded="true"> <span class="open-sub"></span> Why this Company is Best?</a> </div>
+                  <div class="panel-title"> <a data-parent="#accordion1" data-toggle="collapse" href="index-boxed-mp-layout1.html#accordion15" class="" aria-expanded="true"> <span class="open-sub"></span> Опытные ментора</a> </div>
                   <div id="accordion15" class="panel-collapse collapse" role="tablist" aria-expanded="true">
                     <div class="panel-content">
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore impedit quae repellendus provident dolor iure poss imusven am aliquam. Officiis totam ea laborum deser unt vonsess.  iure poss imusven am aliquam</p>
@@ -948,174 +863,8 @@
       </div>
     </section>
 
-    <!-- Divider: testimonials -->
-    <section class="divider parallax layer-overlay overlay-theme-colored-9" data-background-ratio="0.5" data-bg-img="images/bg/bg2.jpg">
-      <div class="container pb-50">
-        <div class="section-title">
-          <div class="row">
-            <div class="col-md-6">
-              <h5 class="font-weight-300 m-0 text-gray-lightgray">Happy Student</h5>
-              <h2 class="mt-0 mb-0 text-uppercase line-bottom text-white font-28">Testimonials<span class="font-30 text-theme-color-2">.</span></h2>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 mb-10">
-            <div class="owl-carousel-2col boxed" data-dots="true">
-              <div class="item">
-                <div class="testimonial pt-10">
-                  <div class="thumb pull-left mb-0 mr-0 pr-20">
-                    <img width="75" class="img-circle" alt="" src="{% static 'images/testimonials/1.jpg' %}">
-                  </div>
-                  <div class="ml-100 ">
-                    <h4 class="text-white mt-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas vel sint, ut. Quisquam doloremque minus possimus eligendi dolore ad.</h4>
-                    <p class="author mt-20">- <span class="text-theme-color-2">Catherine Grace,</span> <small><em class="text-gray-lightgray">CEO apple.inc</em></small></p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimonial pt-10">
-                  <div class="thumb pull-left mb-0 mr-0 pr-20">
-                    <img width="75" class="img-circle" alt="" src="{% static 'images/testimonials/2.jpg' %}">
-                  </div>
-                  <div class="ml-100 ">
-                    <h4 class="text-white mt-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas vel sint, ut. Quisquam doloremque minus possimus eligendi dolore ad.</h4>
-                    <p class="author mt-20">- <span class="text-theme-color-2">Catherine Grace,</span> <small><em class="text-gray-lightgray">CEO apple.inc</em></small></p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimonial pt-10">
-                  <div class="thumb pull-left mb-0 mr-0 pr-20">
-                    <img width="75" class="img-circle" alt="" src="{% static 'images/testimonials/3.jpg' %}">
-                  </div>
-                  <div class="ml-100 ">
-                    <h4 class="text-white mt-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas vel sint, ut. Quisquam doloremque minus possimus eligendi dolore ad.</h4>
-                    <p class="author mt-20">- <span class="text-theme-color-2">Catherine Grace,</span> <small><em class="text-gray-lightgray">CEO apple.inc</em></small></p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimonial pt-10">
-                  <div class="thumb pull-left mb-0 mr-0 pr-20">
-                    <img width="75" class="img-circle" alt="" src="{% static 'images/testimonials/2.jpg' %}">
-                  </div>
-                  <div class="ml-100 ">
-                    <h4 class="text-white mt-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas vel sint, ut. Quisquam doloremque minus possimus eligendi dolore ad.</h4>
-                    <p class="author mt-20">- <span class="text-theme-color-2">Catherine Grace,</span> <small><em class="text-gray-lightgray">CEO apple.inc</em></small></p>
-                  </div>
-                </div>
-              </div>
-            </div> 
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section: blog -->
-    <section id="blog" class="bg-lighter">
-      <div class="container">
-        <div class="section-title mb-10">
-          <div class="row">
-            <div class="col-md-8">
-              <h2 class="mt-0 text-uppercase font-28 line-bottom line-height-1">Latest <span class="text-theme-color-2 font-weight-400">News</span></h2>
-           </div>
-          </div>
-        </div>
-        <div class="section-content">
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-4 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
-              <article class="post clearfix mb-sm-30">
-                <div class="entry-header">
-                  <div class="post-thumb thumb"> 
-                    <img src="{% static 'images/blog/7.jpg' %}" alt="" class="img-responsive img-fullwidth"> 
-                  </div>
-                </div>
-                <div class="entry-content p-20 pr-10 bg-white">
-                  <div class="entry-meta media mt-0 no-bg no-border">
-                    <div class="entry-date media-left text-center flip bg-theme-colored pt-5 pr-15 pb-5 pl-15">
-                      <ul>
-                        <li class="font-16 text-white font-weight-600 border-bottom">28</li>
-                        <li class="font-12 text-white text-uppercase">Feb</li>
-                      </ul>
-                    </div>
-                    <div class="media-body pl-15">
-                      <div class="event-content pull-left flip">
-                        <h4 class="entry-title text-white text-uppercase m-0 mt-5"><a href="index-boxed-mp-layout1.html#">Post title here</a></h4>
-                        <span class="mb-10 text-gray-darkgray mr-10 font-13"><i class="fa fa-commenting-o mr-5 text-theme-colored"></i> 214 Comments</span>                       
-                        <span class="mb-10 text-gray-darkgray mr-10 font-13"><i class="fa fa-heart-o mr-5 text-theme-colored"></i> 895 Likes</span>                       
-                      </div>
-                    </div>
-                  </div>
-                  <p class="mt-10">Lorem ipsum dolor sit amet, consectetur adipisi cing elit. Molestias eius illum libero dolor nobis deleniti, sint assumenda Pariatur iste.</p>
-                  <a href="index-boxed-mp-layout1.html#" class="btn-read-more">Read more</a>
-                  <div class="clearfix"></div>
-                </div>
-              </article>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
-              <article class="post clearfix mb-sm-30">
-                <div class="entry-header">
-                  <div class="post-thumb thumb"> 
-                    <img src="{% static 'images/blog/2.jpg' %}" alt="" class="img-responsive img-fullwidth"> 
-                  </div>
-                </div>
-                <div class="entry-content p-20 pr-10 bg-white">
-                  <div class="entry-meta media mt-0 no-bg no-border">
-                    <div class="entry-date media-left text-center flip bg-theme-colored pt-5 pr-15 pb-5 pl-15">
-                      <ul>
-                        <li class="font-16 text-white font-weight-600 border-bottom">28</li>
-                        <li class="font-12 text-white text-uppercase">Feb</li>
-                      </ul>
-                    </div>
-                    <div class="media-body pl-15">
-                      <div class="event-content pull-left flip">
-                        <h4 class="entry-title text-white text-uppercase m-0 mt-5"><a href="index-boxed-mp-layout1.html#">Post title here</a></h4>
-                        <span class="mb-10 text-gray-darkgray mr-10 font-13"><i class="fa fa-commenting-o mr-5 text-theme-colored"></i> 214 Comments</span>                       
-                        <span class="mb-10 text-gray-darkgray mr-10 font-13"><i class="fa fa-heart-o mr-5 text-theme-colored"></i> 895 Likes</span>                       
-                      </div>
-                    </div>
-                  </div>
-                  <p class="mt-10">Lorem ipsum dolor sit amet, consectetur adipisi cing elit. Molestias eius illum libero dolor nobis deleniti, sint assumenda Pariatur iste.</p>
-                  <a href="index-boxed-mp-layout1.html#" class="btn-read-more">Read more</a>
-                  <div class="clearfix"></div>
-                </div>
-              </article>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
-              <article class="post clearfix">
-                <div class="entry-header">
-                  <div class="post-thumb thumb"> 
-                    <img src="{% static 'images/blog/5.jpg' %}" alt="" class="img-responsive img-fullwidth"> 
-                  </div>
-                </div>
-                <div class="entry-content p-20 pr-10 bg-white">
-                  <div class="entry-meta media mt-0 no-bg no-border">
-                    <div class="entry-date media-left text-center flip bg-theme-colored pt-5 pr-15 pb-5 pl-15">
-                      <ul>
-                        <li class="font-16 text-white font-weight-600 border-bottom">28</li>
-                        <li class="font-12 text-white text-uppercase">Feb</li>
-                      </ul>
-                    </div>
-                    <div class="media-body pl-15">
-                      <div class="event-content pull-left flip">
-                        <h4 class="entry-title text-white text-uppercase m-0 mt-5"><a href="index-boxed-mp-layout1.html#">Post title here</a></h4>
-                        <span class="mb-10 text-gray-darkgray mr-10 font-13"><i class="fa fa-commenting-o mr-5 text-theme-colored"></i> 214 Comments</span>                       
-                        <span class="mb-10 text-gray-darkgray mr-10 font-13"><i class="fa fa-heart-o mr-5 text-theme-colored"></i> 895 Likes</span>                       
-                      </div>
-                    </div>
-                  </div>
-                  <p class="mt-10">Lorem ipsum dolor sit amet, consectetur adipisi cing elit. Molestias eius illum libero dolor nobis deleniti, sint assumenda Pariatur iste.</p>
-                  <a href="index-boxed-mp-layout1.html#" class="btn-read-more">Read more</a>
-                  <div class="clearfix"></div>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    
+    
     <!-- Divider: Clients -->
     <section class="clients bg-theme-color-2">
       <div class="container pt-10 pb-0">

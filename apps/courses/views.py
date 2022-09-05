@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Course
+from .models import Course, Teachers
 from apps.settings.models import Setting
 
 

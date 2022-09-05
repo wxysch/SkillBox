@@ -29,7 +29,6 @@ INSTALLED_APPS = [
     # apps
     'apps.categories',
     'apps.courses',
-    'apps.news',
     'apps.settings',
     'apps.users',
     # Add the following django-allauth apps

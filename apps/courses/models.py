@@ -26,3 +26,18 @@ class Course(models.Model):
     class Meta:
         verbose_name = "Курс"
         verbose_name_plural = "Курсы" 
+
+class Teachers(models.Model):
+    name = models.CharField(max_length=155)
+    job_title = models.CharField(max_length=150) 
+    bio = models.TextField()
+    age = models.SmallIntegerField()
+    photo = models.ImageField(upload_to = 'teachers')
+    url = models.URLField()
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Учитель"
+        verbose_name_plural = "Учителя"
