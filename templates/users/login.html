@@ -13,9 +13,9 @@
           <div class="container">
             <div class="row">
               <div class="col-md-6 col-md-push-3">
-                <div class="text-center mb-60"><a href="form-login-style2.html#" class=""><img alt="" src="images/logo-wide.png"></a></div>
-                <h4 class="text-theme-colored mt-0 pt-5"> Login</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
+                <div class="text-center mb-60"><a href="{% url 'index' %}" class=""><img alt="" src="{% static 'images/logo-wide.png' %}"></a></div>
+                <h4 class="text-theme-colored mt-0 pt-5"> Войти</h4>
+                <p>Если у вас уже имеется аккаунт войдите.</p>
                 <form name="login-form" method="POST" class="form-transparent clearfix">
                   {% csrf_token %}
                   <div class="row">
@@ -36,14 +36,15 @@
                       Remember me </label>
                   </div>
                   <div class="form-group pull-right mt-10">
+                  </div>
+                  <div class="clear text-center pt-10">
+
+                  </div>
+                  <div class="clear text-center pt-10">
+                    <button type="submit" class="btn btn-dark btn-lg btn-block no-border mt-15 mb-15">Login</button>
+
+                    <a class="btn btn-dark btn-lg btn-block no-border mt-15 mb-15" href="{% provider_login_url 'google' %}x`" data-bg-color="#3b5998">Login with google</a>
                     
-                    <button type="submit" class="btn btn-dark btn-sm">Login</button>
-                  </div>
-                  <div class="clear text-center pt-10">
-                    <a class="text-theme-colored font-weight-600 font-12" href="form-login-style2.html#">Forgot Your Password?</a>
-                  </div>
-                  <div class="clear text-center pt-10">
-                    <a class="btn btn-dark btn-lg btn-block no-border mt-15 mb-15" href="{% provider_login_url 'google' %}x`" data-bg-color="#3b5998">Login google</a>
                   </div>
                 </form>
               </div>

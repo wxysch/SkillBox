@@ -53,3 +53,10 @@ def profile(request):
         'setting' : setting,
     }
     return render(request,'courses/profile.html', context)
+
+def update(request):
+    setting = Setting.objects.latest('id')
+    context = {
+        'setting' : setting,
+    }
+    return render(request, 'courses/update.html', context)
