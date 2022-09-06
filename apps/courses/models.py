@@ -32,6 +32,7 @@ class Teachers(models.Model):
     job_title = models.CharField(max_length=150) 
     bio = models.TextField()
     age = models.SmallIntegerField()
+    email = models.EmailField()
     photo = models.ImageField(upload_to = 'teachers')
     url = models.URLField()
 

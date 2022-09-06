@@ -31,3 +31,4 @@ class ItRunLogo(models.Model):
     class Meta:
         verbose_name = "Логотип"
         verbose_name_plural = "Логотипы"
+

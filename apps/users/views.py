@@ -47,3 +47,9 @@ def user_login(request):
     }
     return render(request, 'users/login.html', context)
 
+def profile(request):
+    setting = Setting.objects.latest('id')
+    context = {
+        'setting' : setting,
+    }
+    return render(request,'courses/profile.html', context)

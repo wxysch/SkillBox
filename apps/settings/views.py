@@ -19,3 +19,9 @@ def index(request):
     return render(request, 'courses/index.html', context)
 
 
+def contacts(request):
+    setting = Setting.objects.latest('id')
+    context = {
+        'setting' : setting,
+        }
+    return render(request, 'courses/contact.html', context)

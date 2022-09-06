@@ -6,7 +6,7 @@
   <!-- Start main-content -->
   <div class="main-content">
     <!-- Section: inner-header -->
-    <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img="images/bg/bg3.jpg">
+    <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img="{% static 'images/bg/bg3.jpg' %}">
       <div class="container pt-70 pb-20">
         <!-- Section Content -->
         <div class="section-content">
@@ -106,32 +106,31 @@
               <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="icon-box media bg-deep p-30 mb-20"> <a class="media-left pull-left flip" href="page-contact4-with-multiple-marker.html#"> <i class="pe-7s-map-2 text-theme-colored"></i></a>
                   <div class="media-body">
-                    <h5 class="mt-0">Our Office Location</h5>
-                    <p>#405, Lan Streen,Vegas, USA</p>
+                    <h5 class="mt-0">Наш офис</h5>
+                    <p>{{ setting.address }}</p>
                   </div>
                 </div>
               </div>
               <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="icon-box media bg-deep p-30 mb-20"> <a class="media-left pull-left flip" href="page-contact4-with-multiple-marker.html#"> <i class="pe-7s-call text-theme-colored"></i></a>
                   <div class="media-body">
-                    <h5 class="mt-0">Contact Number</h5>
-                    <p>+325 12345 65478</p>
+                    <h5 class="mt-0">Позвони нам</h5>
+                    <p>{{ setting.phone }}</p>
                   </div>
                 </div>
               </div>
               <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="icon-box media bg-deep p-30 mb-20"> <a class="media-left pull-left flip" href="page-contact4-with-multiple-marker.html#"> <i class="pe-7s-mail text-theme-colored"></i></a>
                   <div class="media-body">
-                    <h5 class="mt-0">Email Address</h5>
-                    <p>supporte@yourdomin.com</p>
+                    <h5 class="mt-0">Email адресс</h5>
+                    <p>{{ setting.email }}</p>
                   </div>
                 </div>
               </div>
               <div class="col-xs-12 col-sm-6 col-md-6">
-                <div class="icon-box media bg-deep p-30 mb-20"> <a class="media-left pull-left flip" href="page-contact4-with-multiple-marker.html#"> <i class="fa fa-skype text-theme-colored"></i></a>
+                <div class="icon-box media bg-deep p-30 mb-20"> <a class="media-left pull-left flip" href="page-contact4-with-multiple-marker.html#"> <a href="https://www.instagram.com/itrun.osh/"><i class="fa fa-instagram"></i></a></a>
                   <div class="media-body">
-                    <h5 class="mt-0">Make a Video Call</h5>
-                    <p>ThemeMascotSkype</p>
+                    <h5 class="mt-0">Напиши нам</h5>
                   </div>
                 </div>
               </div>
@@ -165,5 +164,5 @@
   <!-- end main-content -->
 
 
-{% include 'include/footer.html' %}
+  {% include 'include/footer.html' %}
 {% endblock %}
