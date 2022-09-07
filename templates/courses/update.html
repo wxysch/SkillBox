@@ -30,14 +30,14 @@
           <div class="row">
             <div class="col-sx-12 col-sm-4 col-md-4">
               <div class="doctor-thumb">
-                <img src="{{ user.profile_image }} " alt="">
+                <img src="{{ user.profile_image.url }} " alt="">
               </div>
               <div class="info p-20 bg-black-333">
                 <h4 class="text-uppercase text-white">{{ user.username }}</h4>
                 <p class="text-gray-silver"></p>
                 <ul class="list angle-double-right m-0">
                   <li class="mt-0 text-gray-silver"><strong class="text-gray-lighter">Email</strong><br> {{ user.email }}</li>
-                  <li class="text-gray-silver"><strong class="text-gray-lighter">Web</strong><br> www.yourdomain.com</li>
+                  <li class="text-gray-silver"><strong class="text-gray-lighter">Phone</strong><br> {{ user.phone }}</li>
                 </ul>
                 <ul class="styled-icons icon-gray icon-circled icon-sm mt-15 mb-15">
                   <li><a href="page-account-edit.html#"><i class="fa fa-facebook"></i></a></li>

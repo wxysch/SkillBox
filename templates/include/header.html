@@ -107,7 +107,7 @@
                       <ul class="dropdown">
                         {% if user.is_authenticated %}
                         <li><a href="{% url 'profile' %}">Account</a></li>
-                        <li><a href="{% url 'update' %}">Edit Account</a></li>
+                        <li><a href="{% url 'update' user.id %}">Edit Account</a></li>
                         {% else %}
 
                         {% endif %}

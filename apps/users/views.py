@@ -54,9 +54,24 @@ def profile(request):
     }
     return render(request,'courses/profile.html', context)
 
-def update(request):
+def update(request, id):
     setting = Setting.objects.latest('id')
+    user = User.objects.get(id = id)
+    if request.method == "POST":
+        try:
+            username = request.POST.get('username')
+            email = request.POST.get('email')
+            profile_image = request.FILES.get('profile_image')
+            user = User.objects.get(id = id)
+            user.username = username
+            user.email = email
+            user.profile_image = profile_image
+            user.save()
+            return redirect('post_detail')
+        except:
+            return HttpResponse("Error")
     context = {
         'setting' : setting,
+        'user' : user,
     }
     return render(request, 'courses/update.html', context)
