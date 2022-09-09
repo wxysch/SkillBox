@@ -1,0 +1,138 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block content %}
+{% include 'include/header.html' %}
+
+    <!-- Section: team -->
+    <section>
+      <div class="container">
+        <div class="section-title mb-10">
+          <div class="row">
+            <div class="col-md-8">
+              <h2 class="mt-0 text-uppercase font-28 line-bottom line-height-1">Преподавательский <span class="text-theme-color-2 font-weight-400">состав</span></h2>
+           </div>
+          </div>
+        </div>
+        <div class="section-content">
+          <div class="row multi-row-clearfix">
+            {% for teacher in teachers %}
+            <div class="col-sm-6 col-md-3 sm-text-center mb-sm-30">
+              <div class="team maxwidth400">
+                <div class="thumb"><img class="img-fullwidth" src="{{ teacher.photo.url }}" alt=""></div>
+                <div class="content border-1px border-bottom-theme-color-2-2px p-15 bg-light clearfix">
+                  <h4 class="name text-theme-color-2 mt-0">{{ teacher.name }} - <small>{{ teacher.job_title }}</small></h4>
+                  <p class="mb-20">{{ teacher.bio }}</p>
+                  <ul class="styled-icons icon-dark icon-circled icon-theme-colored icon-sm pull-left flip">
+                    <li><a href="{{ teacher.url }}"><i class="fa fa-instagram"></i></a></li>
+                  </ul>
+                  <a class="btn btn-theme-colored btn-sm pull-right flip" href="page-teachers-details.html">view details</a>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider: Funfact -->
+    <section class="divider parallax layer-overlay overlay-theme-colored-9" data-bg-img="{% static 'images/bg/bg2.jpg' %}" data-parallax-ratio="0.7">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
+            <div class="funfact text-center">
+              <i class="pe-7s-smile mt-5 text-theme-color-2"></i>
+              <h2 data-animation-duration="2000" data-value="5240" class="animate-number text-white mt-0 font-38 font-weight-500">0</h2>
+              <h5 class="text-white text-uppercase mb-0">Счастливыx студентoB</h5>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
+            <div class="funfact text-center">
+              <i class="pe-7s-note2 mt-5 text-theme-color-2"></i>
+              <h2 data-animation-duration="2000" data-value="675" class="animate-number text-white mt-0 font-38 font-weight-500">0</h2>
+              <h5 class="text-white text-uppercase mb-0">Проданныx курсoB</h5>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
+            <div class="funfact text-center">
+              <i class="pe-7s-users mt-5 text-theme-color-2"></i>
+              <h2 data-animation-duration="2000" data-value="15" class="animate-number text-white mt-0 font-38 font-weight-500">0</h2>
+              <h5 class="text-white text-uppercase mb-0">учителей</h5>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 mb-md-0">
+            <div class="funfact text-center">
+              <i class="pe-7s-cup mt-5 text-theme-color-2"></i>
+              <h2 data-animation-duration="2000" data-value="5" class="animate-number text-white mt-0 font-38 font-weight-500">0</h2>
+              <h5 class="text-white text-uppercase mb-0">ВЫИГРАННЫX НАГРАД</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Why Choose Us -->
+    <section id="event" class="">
+      <div class="container pb-50">
+        <div class="section-content">
+          <div class="row">
+            <div class="col-md-6">
+              <h3 class="line-bottom mt-0 line-height-1">Почему <span class="text-theme-color-2">Мы?</span></h3>
+              <p class="mb-10">Самая крупная академия программирования в Оше
+                Освой программирование  за 6 месяцев 
+                по методике IT-RUN в Оше</p>
+              <div id="accordion1" class="panel-group accordion">
+                <div class="panel">
+                  <div class="panel-title"> <a class="active" data-parent="#accordion1" data-toggle="collapse" href="index-boxed-mp-layout1.html#accordion11" aria-expanded="true"> <span class="open-sub"></span> Почему наша компания лучшая?</a> </div>
+                  <div id="accordion11" class="panel-collapse collapse in" role="tablist" aria-expanded="true">
+                    <div class="panel-content">
+                      <p>Что вы получите обучаясь в академии IT-RUN?</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="panel-title"> <a data-parent="#accordion1" data-toggle="collapse" href="index-boxed-mp-layout1.html#accordion12" class="" aria-expanded="true"> <span class="open-sub"></span>Стажировка в местных IT компаниях</a> </div>
+                  <div id="accordion12" class="panel-collapse collapse" role="tablist" aria-expanded="true">
+                    <div class="panel-content">
+                      <p>Мы поможем вам с трудоустройством и поможем начать зарабаывать от 40 000 сомов в месяц</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="panel-title"> <a data-parent="#accordion1" data-toggle="collapse" href="index-boxed-mp-layout1.html#accordion13" class="" aria-expanded="true"> <span class="open-sub"></span> Авторская методика обучения</a> </div>
+                  <div id="accordion13" class="panel-collapse collapse" role="tablist" aria-expanded="true">
+                    <div class="panel-content">
+                      <p>У каждого преподователя свой особый метод обучение</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="panel-title"> <a data-parent="#accordion1" data-toggle="collapse" href="index-boxed-mp-layout1.html#accordion14" class="" aria-expanded="true"> <span class="open-sub"></span> Сертифицированные преподаватели</a> </div>
+                  <div id="accordion14" class="panel-collapse collapse" role="tablist" aria-expanded="true">
+                    <div class="panel-content">
+                      <p>Вас будут обучать только опытные и сертифицированные ментора</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel">
+                  <div class="panel-title"> <a data-parent="#accordion1" data-toggle="collapse" href="index-boxed-mp-layout1.html#accordion15" class="" aria-expanded="true"> <span class="open-sub"></span> Опытные ментора</a> </div>
+                  <div id="accordion15" class="panel-collapse collapse" role="tablist" aria-expanded="true">
+                    <div class="panel-content">
+                      <p>У каждого ментора опыт работы от 1 до 2 лет</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+  </div>
+  <!-- end main-content -->
+  
+  {% include 'include/footer.html' %}
+  {% endblock %}

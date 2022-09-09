@@ -12,14 +12,6 @@ urlpatterns = [
     path('', include('apps.courses.urls')),
     path('', include('apps.settings.urls')),
     path('accounts/', include('allauth.urls')),
-    path(
-        'change-password/',
-        auth_views.PasswordChangeView.as_view(
-            template_name='commons/change-password.html',
-            success_url = '/'
-        ),
-        name='change_password'
-    ),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

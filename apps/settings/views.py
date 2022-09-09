@@ -25,3 +25,10 @@ def contacts(request):
         'setting' : setting,
         }
     return render(request, 'courses/contact.html', context)
+
+def job(request):
+    setting = Setting.objects.latest('id')
+    context = {
+        'setting' : setting,
+    }
+    return render(request,'courses/job-details.html',context)

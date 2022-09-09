@@ -59,3 +59,12 @@ def course_grid(request):
         'courses': courses
     }
     return render(request,'courses/course-grid.html', context)
+
+def all_teachers(request):
+    setting = Setting.objects.latest('id')
+    teachers = Teachers.objects.all()
+    context = {
+        'setting' : setting,
+        'teachers' : teachers,
+    }
+    return render(request,'courses/all-teachers.html', context)
