@@ -99,38 +99,37 @@
           <div class="container">
             <nav id="menuzord" class="menuzord bg-theme-colored pull-left flip menuzord-responsive">
               <ul class="menuzord-menu">
-                <li class="active"><a href="{% url 'index' %}">Home</a>
+                <li class="active"><a href="{% url 'index' %}">Домой</a>
                 </li>
-                <li><a href="index-boxed-mp-layout1.html#">Pages</a>
+                <li><a href="index-boxed-mp-layout1.html#">Страницы</a>
                   <ul class="dropdown">
-                    <li><a href="index-boxed-mp-layout1.html#">Profile</a>
+                    <li><a href="index-boxed-mp-layout1.html#">Профиль</a>
                       <ul class="dropdown">
                         {% if user.is_authenticated %}
-                        <li><a href="{% url 'profile' %}">Account</a></li>
-                        <li><a href="{% url 'update' user.id %}">Edit Account</a></li>
+                        <li><a href="{% url 'profile' %}">Аккаунт</a></li>
+                        <li><a href="{% url 'update' user.id %}">Редактировать</a></li>
                         {% else %}
 
                         {% endif %}
                       </ul>
                     </li>
-                    <li><a href="index-boxed-mp-layout1.html#">Job <span class="label label-success">New</span></a>
+                    <li><a href="index-boxed-mp-layout1.html#">Работа <span class="label label-success">New</span></a>
                       <ul class="dropdown">
-                        <li><a href="job-details-style2.html">Job Details</a></li>
+                        <li><a href="job-details-style2.html">Оставить Запрос</a></li>
                       </ul>
                     </li>
-                    <li><a href="{% url 'contacts' %}">Contact</a>
+                    <li><a href="{% url 'contacts' %}">Контакты</a>
                     </li>
                   </ul>
                 </li>
-                <li><a href="index-boxed-mp-layout1.html#home">Courses</a>
+                <li><a href="index-boxed-mp-layout1.html#home">Курсы</a>
                   <ul class="dropdown">
-                    <li><a href="page-course-gird.html">Course Gird</a></li>
+                    <li><a href="{% url 'grid' %}">Все курсы</a></li>
                   </ul>
                 </li>
-                <li><a href="index-boxed-mp-layout1.html#home">Teachers</a>
+                <li><a href="index-boxed-mp-layout1.html#home">Учителя</a>
                   <ul class="dropdown">
-                    <li><a href="page-teachers-style1.html"> All Teachers</a></li>
-                    <li><a href="page-teachers-details.html">Teachers Details</a></li>
+                    <li><a href="page-teachers-style1.html"> Все учителя</a></li>
                   </ul>
                 </li>
               <ul class="pull-right flip hidden-sm hidden-xs">

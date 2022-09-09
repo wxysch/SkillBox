@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Course, Teachers
 from apps.settings.models import Setting
 from django.http import HttpResponse
+from django.db.models import Q
 
 def course_detail(request, id):
     course = Course.objects.get(id = id)
@@ -37,3 +38,24 @@ def update(request, id):
         'course' : course,
     }
     return render(request, 'courses/update.html', context)
+
+def course_search(request):
+    course = Course.objects.all()
+    setting = Setting.objects.latest('id')
+    qury_object = request.GET.get('key')
+    if qury_object:
+        course = Course.objects.filter(Q(title__icontains = qury_object) | Q(description__icontains = qury_object))
+    context = {
+        'setting' : setting,
+        'course' : course
+    }
+    return render(request, 'courses/index.html', context)
+
+def course_grid(request):
+    setting = Setting.objects.latest('id')
+    courses = Course.objects.all()
+    context = {
+        'setting' : setting,
+        'courses': courses
+    }
+    return render(request,'courses/course-grid.html', context)
