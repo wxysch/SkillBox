@@ -1,4 +1,4 @@
-from tkinter import CASCADE
+from apps.users.models import User
 from django.db import models
 
 # Create your models here.
@@ -42,3 +42,16 @@ class Teachers(models.Model):
     class Meta:
         verbose_name = "Учитель"
         verbose_name_plural = "Учителя"
+
+class Comment(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE,related_name="from_user")
+    comment_user = models.ForeignKey(Course,on_delete=models.CASCADE)
+    text = models.TextField()
+    created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.text}"
+
+    class Meta:
+        verbose_name = "Комментарий"
+        verbose_name_plural = "Комментарии"

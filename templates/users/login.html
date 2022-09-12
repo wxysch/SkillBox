@@ -16,7 +16,7 @@
                 <div class="text-center mb-60"><a href="{% url 'index' %}" class=""><img alt="" src="{% static 'images/logo-wide.png' %}"></a></div>
                 <h4 class="text-theme-colored mt-0 pt-5"> Войти</h4>
                 <p>Если у вас уже имеется аккаунт войдите.</p>
-                <form name="login-form" method="POST" class="form-transparent clearfix">
+                <form name="login" method="POST" class="form-transparent clearfix">
                   {% csrf_token %}
                   <div class="row">
                     <div class="form-group col-md-12">

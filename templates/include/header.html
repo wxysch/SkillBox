@@ -37,8 +37,9 @@
                       <ul class="dropdown">
                         <li>
                           <div class="search-form-wrapper">
-                            <form method="get" class="mt-10">
-                              <input type="text" onfocus="if(this.value =='Enter your search') { this.value = ''; }" onblur="if(this.value == '') { this.value ='Enter your search'; }" value="Enter your search" id="searchinput" name="s" class="">
+                            <form method="get" class="mt-10" action="{% url 'search' %}">
+                              {% csrf_token %}
+                              <input type="text" onfocus="if(this.value =='Enter your search') { this.value = ''; }" onblur="if(this.value == '') { this.value =''; }" value="" id="searchinput" name="key" class="">
                               <label><input type="submit" name="submit" value=""></label>
                             </form>
                           </div>
