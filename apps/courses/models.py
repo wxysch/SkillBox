@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from apps.users.models import User
 from django.db import models
 
@@ -34,6 +35,7 @@ class Teachers(models.Model):
     age = models.SmallIntegerField()
     email = models.EmailField()
     photo = models.ImageField(upload_to = 'teachers')
+    git_hub = models.ImageField(upload_to = "github/")
     url = models.URLField()
 
     def __str__(self):

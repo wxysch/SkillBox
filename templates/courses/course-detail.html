@@ -48,7 +48,7 @@
                 <h4 class="widget-title line-bottom">Courses <span class="text-theme-color-2">List</span></h4>
                 <div class="services-list">
                   <ul class="list list-border angle-double-right">
-                    <li class="active"><a href="page-courses-accounting-technologies.html">{{  course.name }}</a></li>
+                    <li class="active"><a href="{% url 'bank' %}">{{  course.name }}-Купить</a></li>
                   </ul>
                 </div>
               </div>
@@ -76,7 +76,7 @@
               </div>
               <div class="widget">
                 <h4 class="widget-title line-bottom">Оставьте <span class="text-theme-color-2">Отзыв</span></h4>
-                <form id="quick_contact_form_sidebar" name="comment" class="quick-contact-form" action="https://kodesolution.com/html/2016/studypress-html/demo/includes/quickcontact.php" method="POST">
+                <form class="quick-contact-form" method="POST">
                   {% csrf_token %}
                   <div class="form-group">
                     <textarea name="text" class="form-control" required="" placeholder="Оставить отзыв" rows="3"></textarea>
@@ -87,29 +87,7 @@
                 </form>
                 
                 <!-- Quick Contact Form Validation-->
-                <script type="text/javascript">
-                  $("#quick_contact_form_sidebar").validate({
-                    submitHandler: function(form) {
-                      var form_btn = $(form).find('button[type="submit"]');
-                      var form_result_div = '#form-result';
-                      $(form_result_div).remove();
-                      form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
-                      var form_btn_old_msg = form_btn.html();
-                      form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
-                      $(form).ajaxSubmit({
-                        dataType:  'json',
-                        success: function(data) {
-                          if( data.status == 'true' ) {
-                            $(form).find('.form-control').val('');
-                          }
-                          form_btn.prop('disabled', false).html(form_btn_old_msg);
-                          $(form_result_div).html(data.message).fadeIn('slow');
-                          setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
-                        }
-                      });
-                    }
-                  });
-                </script>
+                
               </div>
             </div>
           </div>

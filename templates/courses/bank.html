@@ -1,0 +1,40 @@
+{% extends 'homepage.html' %}
+{% load static %}
+{% block content %}
+{% include 'include/header.html' %}
+            <!-- <div class="button">
+              <div class="toggle">
+                <input type="checkbox">
+              </div>
+              <div class="text"></div>
+            </div> -->
+            <section class="container df-center">
+                <p class="logotodo">
+                    <img src="{% static 'images/project/logo-sber.png' %}" alt="изображение в центре параграфа" />
+                    <h3>Сбер-Bank</h3>
+                    <h5>Оплатите с помощью <br>
+                        Сбер-Bank <br>
+                    </h5>
+                </p>
+                <button class="todobtn"><span>Посетить</span></button>
+                <p class="logotodo">
+                    <img src="{% static 'images/project/kicb.png' %}" alt="Онлайн магазин" class="onlinelogo">
+                    <h3>KICB Bank</h3>
+                    <h5>Оплатите с помощью <br>
+                        KICB Bank <br>
+                    </h5>
+                    <button class="todobtn" style="vertical-align:middle"><span>Посетить</span></button>
+                </p>
+                <p class="logotodo">
+                    <img src="{% static 'images/project/mbank.jpg' %}" alt="Blog" class="insta">
+                    <h3>MBank</h3>
+                    <h5>Оплатите с помощью<br>
+                    MBank<br>
+                    </h5>
+                    <button class="todobtn"><span>Посетить</span></button>
+                </p>
+            </section>
+            <br>
+        <p></p>
+{% include 'include/footer.html' %}
+{% endblock %}

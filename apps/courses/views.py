@@ -1,3 +1,5 @@
+from multiprocessing import context
+from unicodedata import name
 from django.shortcuts import render, redirect
 from .models import Course, Teachers,Comment
 from apps.settings.models import Setting
@@ -8,6 +10,10 @@ def course_detail(request, id):
     course = Course.objects.get(id = id)
     setting= Setting.objects.latest('id')
     comments = Comment.objects.all()
+    if request.method == "POST":
+        text = request.POST.get('text')
+        Comment.objects.create(user = request.user, comment_user = course, text = text)
+        return redirect('course_detail', course.id)
     context={
         'course': course,
         'setting': setting, 
@@ -41,17 +47,6 @@ def update(request, id):
     }
     return render(request, 'courses/update.html', context)
 
-def course_search(request):
-    course = Course.objects.all()
-    setting = Setting.objects.latest('id')
-    qury_object = request.GET.get('key')
-    if qury_object:
-        course = Course.objects.filter(Q(title__icontains = qury_object) | Q(description__icontains = qury_object))
-    context = {
-        'setting' : setting,
-        'course' : course
-    }
-    return render(request, 'courses/index.html', context)
 
 def course_grid(request):
     setting = Setting.objects.latest('id')
@@ -83,24 +78,20 @@ def all_teachers(request):
 def course_search(request):
     setting = Setting.objects.latest('id')
     courses = Course.objects.all()
+    comments = Comment.objects.all()
     qury_object = request.GET.get('key')
     if qury_object:
         courses = Course.objects.filter(Q(name__icontains = qury_object))
     context = {
         'setting' : setting,
-        'courses' : courses
+        'courses' : courses,
+        'comments' : comments,
     }
     return render(request,"courses/search.html", context)
 
-# def course_comment(request, id):
-#     setting = Setting.objects.latest('id')
-#     course = Course.objects.get(id = id)
-#     if request.method == "POST":
-#         text =request.POST.get('text')
-#         comment = Comment.objects.create(user = request.user, text = text)
-#         return redirect('comment_user', course.id)
-#     context = {
-#         'setting' : setting,
-#         'course' : course,
-#     }
-#     return render(request, 'users/course-detail.html', context)
+def buy_course(request):
+    setting = Setting.objects.latest('id')
+    context = {
+        'setting' : setting,
+    }
+    return render(request, 'courses/bank.html',context)
