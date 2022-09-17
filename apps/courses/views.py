@@ -1,5 +1,3 @@
-from multiprocessing import context
-from unicodedata import name
 from django.shortcuts import render, redirect
 from .models import Course, Teachers,Comment
 from apps.settings.models import Setting

@@ -30,8 +30,8 @@
             <img class="mt-5 mb-20" alt="" src="Х% static 'mages/logo-white-footer.png' %}">
             <p>{{ setting.address }}</p>
             <ul class="list-inline mt-5">
-              <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-theme-color-2 mr-5"></i> <a class="text-gray" href="index-boxed-mp-layout1.html#">{{ setting.phone }}</a> </li>
-              <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-theme-color-2 mr-5"></i> <a class="text-gray" href="index-boxed-mp-layout1.html#">{{ setting.email }}</a> </li>
+              <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-theme-color-2 mr-5"></i>{{ setting.phone }} </li>
+              <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-theme-color-2 mr-5"></i>{{ setting.email }} </li>
               <li class="m-0 pl-10 pr-10"> <i class="fa fa-globe text-theme-color-2 mr-5"></i> <a class="text-gray" href="https://www.instagram.com/itsaallicho/">itsaallicho</a> </li>
             </ul>
           </div>
@@ -103,25 +103,7 @@
               </div>
             </form>
             <!-- Mailchimp Subscription Form Validation-->
-            <script type="text/javascript">
-              $('#mailchimp-subscription-form-footer').ajaxChimp({
-                  callback: mailChimpCallBack,
-                  url: '//thememascot.us9.list-manage.com/subscribe/post?u=a01f440178e35febc8cf4e51f&amp;id=49d6d30e1e'
-              });
-
-              function mailChimpCallBack(resp) {
-                  // Hide any previous response text
-                  var $mailchimpform = $('#mailchimp-subscription-form-footer'),
-                      $response = '';
-                  $mailchimpform.children(".alert").remove();
-                  if (resp.result === 'success') {
-                      $response = '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + resp.msg + '</div>';
-                  } else if (resp.result === 'error') {
-                      $response = '<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + resp.msg + '</div>';
-                  }
-                  $mailchimpform.prepend($response);
-              }
-            </script>
+           
             <!-- Mailchimp Subscription Form Ends Here -->
           </div>
         </div>
@@ -137,15 +119,7 @@
             <div class="widget no-border m-0">
               <ul class="list-inline sm-text-center mt-5 font-12">
                 <li>
-                  <a href="index-boxed-mp-layout1.html#">FAQ</a>
-                </li>
-                <li>|</li>
-                <li>
-                  <a href="index-boxed-mp-layout1.html#">Help Desk</a>
-                </li>
-                <li>|</li>
-                <li>
-                  <a href="index-boxed-mp-layout1.html#">Support</a>
+                  <a href="https://www.instagram.com/itsaallicho/">Created by <span >@itsaallicho</span></a>
                 </li>
               </ul>
             </div>
