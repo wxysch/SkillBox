@@ -1,4 +1,5 @@
 from distutils.command.upload import upload
+from tokenize import blank_re
 from apps.users.models import User
 from django.db import models
 
@@ -35,8 +36,7 @@ class Teachers(models.Model):
     age = models.SmallIntegerField()
     email = models.EmailField()
     photo = models.ImageField(upload_to = 'teachers')
-    git_hub = models.ImageField(upload_to = "github/")
-    url = models.URLField()
+    url = models.URLField(blank = True, null=True)
 
     def __str__(self):
         return self.name
