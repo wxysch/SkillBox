@@ -32,3 +32,17 @@ class ItRunLogo(models.Model):
         verbose_name = "Логотип"
         verbose_name_plural = "Логотипы"
 
+
+class Reguest(models.Model):
+    name = models.CharField(max_length=255)
+    email = models.EmailField(max_length=255)
+    subject = models.TextField(max_length=100)
+    phone = models.CharField(max_length=100)
+    text = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Запрос"
+        verbose_name_plural = "Запросы"
