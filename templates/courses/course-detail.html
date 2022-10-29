@@ -79,11 +79,17 @@
                 <form class="quick-contact-form" method="POST">
                   {% csrf_token %}
                   <div class="form-group">
+                    {% if user.is_authenticated %}
                     <textarea name="text" class="form-control" required="" placeholder="Оставить отзыв" rows="3"></textarea>
+                    <br>
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-theme-colored btn-flat btn-xs btn-quick-contact text-white pt-5 pb-5">Отправить</button>
+                    </div>
+                    {% else %}
+                    <textarea name="text" class="form-control" required="" placeholder="Вы не можете оставить отзыв т.к вы не зарегистрированы" rows="3"></textarea>
+                    {% endif %}
                   </div>
-                  <div class="form-group">
-                    <button type="submit" class="btn btn-theme-colored btn-flat btn-xs btn-quick-contact text-white pt-5 pb-5">Отправить</button>
-                  </div>
+                  
                 </form>
                 
                 <!-- Quick Contact Form Validation-->
@@ -115,9 +121,9 @@
             {% if comment.comment_user.name == course.name %}
             <div class="item">
               <div class="testimonial pt-10">
-                <div class="thumb pull-left mb-0 mr-0 pr-20">
-                  <img width="75" style="width:75px; height:75px;" class="img-circle" alt="" src="{{ comment.user.profile_image.url }}">
-                </div>
+                <!-- <div class="thumb pull-left mb-0 mr-0 pr-20">
+                  <img width="75" style="width:75px; height:75px;" class="img-circle" alt="" src="">
+                </div> -->
                 <div class="ml-100 ">
                   <h4 class="text-white mt-0">{{ comment.text }}</h4>
                   <p class="author mt-20">- <span class="text-theme-color-2">{{ comment.user }},</span> <small><em class="text-gray-lightgray">{{ comment.created }}</em></small></p>

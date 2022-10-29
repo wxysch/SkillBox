@@ -541,12 +541,12 @@
         <div class="section-content">
           <div class="row multi-row-clearfix">
             {% for teacher in teachers %}
-            <div class="col-sm-6 col-md-3 sm-text-center mb-sm-30">
+            <div class="col-sm-6 col-md-3 sm-text-center mb-sm-30" style="max-height: 440px;">
               <div class="team maxwidth400">
-                <div class="thumb"><img class="img-fullwidth" src="{{ teacher.photo.url }}" alt=""></div>
-                <div class="content border-1px border-bottom-theme-color-2-2px p-15 bg-light clearfix">
+                <div class="thumb"><img class="img-fullwidth" style="max-width: 412px; max-height:300px;" src="{{ teacher.photo.url }}" alt=""></div>
+                <div class="content border-1px border-bottom-theme-color-2-2px p-15 bg-light clearfix" >
                   <h4 class="name text-theme-color-2 mt-0">{{ teacher.name }} - <small>{{ teacher.job_title }}</small></h4>
-                  <p class="mb-20">{{ teacher.bio }}</p>
+                  <p class="mb-10">{{ teacher.bio| truncatewords:5 }}</p>
                   <ul class="styled-icons icon-dark icon-circled icon-theme-colored icon-sm pull-left flip">
                     <li><a href="{{ teacher.url }}"><i class="fa fa-instagram"></i></a></li>
                   </ul>

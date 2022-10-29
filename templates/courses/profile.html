@@ -30,7 +30,11 @@
           <div class="row">
             <div class="col-sx-12 col-sm-4 col-md-4">
               <div class="doctor-thumb">
+                {% if user.profile_image %}
                 <img src="{{ user.profile_image.url }}" alt="">
+                {% else %}
+                <img src="" alt="фотография профиля">
+                {% endif %}
               </div>
               <div class="info p-20 bg-black-333">
                 <h4 class="text-uppercase text-white">{{ user.username }}</h4>
