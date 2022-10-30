@@ -12,11 +12,9 @@
         <div class="section-content">
           <div class="row">
             <div class="col-md-12 text-center">
-              <h3 class="font-28">Job Details 1</h2>
+              <h3 class="font-28">Запрос на трудоустройство</h2>
               <ol class="breadcrumb text-center text-black mt-10">
-                <li><a href="job-details-style1.html#">Home</a></li>
-                <li><a href="job-details-style1.html#">Pages</a></li>
-                <li class="active text-theme-colored">Page Title</li>
+                
               </ol>
             </div>
           </div>
@@ -30,31 +28,31 @@
           <div class="col-md-3">
             <div class="job-overview">
               <dl class="dl-horizontal">
-                <dt><i class="fa fa-calendar text-theme-colored mt-5 font-15"></i></dt>
+                <!-- <dt><i class="fa fa-calendar text-theme-colored mt-5 font-15"></i></dt> -->
                 <dd>
-                  <h5 class="mt-0">Date Posted:</h5>
-                  <p>Posted 10 days ago</p>
+                  
                 </dd>
               </dl>
               <dl class="dl-horizontal">
                 <dt><i class="fa fa-map-marker text-theme-colored mt-5 font-15"></i></dt>
                 <dd>
-                  <h5 class="mt-0">Location:</h5>
-                  <p>Anywhere</p>
+                  <h5 class="mt-0">Расположение:</h5>
+                  <p>Масалиева 38</p>
                 </dd>
               </dl>
               <dl class="dl-horizontal">
                 <dt><i class="fa fa-user text-theme-colored mt-5 font-15"></i></dt>
                 <dd>
-                  <h5 class="mt-0">Job Title:</h5>
-                  <p>Finance Manager</p>
+                  <h5 class="mt-0">Должность:</h5>
+                  <p>Ментор</p>
+                  <p>Саппорт</p>
                 </dd>
               </dl>
               <dl class="dl-horizontal">
                 <dt><i class="fa fa-money text-theme-colored mt-5 font-15"></i></dt>
                 <dd>
-                  <h5 class="mt-0">Salary:</h5>
-                  <p>$10000 - 13000</p>
+                  <h5 class="mt-0">Зарплата:</h5>
+                  <p>$100 - 500</p>
                 </dd>
               </dl>
               <a class="btn btn-dark mt-20" href="job-details-style1.html#">Apply Now</a>
@@ -65,15 +63,15 @@
               <a href="job-details-style1.html#" class="icon icon-gray pull-left mb-0 mr-10">
                 <i class="pe-7s-users"></i>
               </a>
-              <h3 class="icon-box-title pt-15 mt-0 mb-40">Finance Manager</h3>
+              <h3 class="icon-box-title pt-15 mt-0 mb-40">Должности</h3>
               <hr>
-              <p class="text-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi id perspiciatis facilis nulla possimus quasi, amet qui. Ea rerum officia, aspernatur nulla neque nesciunt alias repudiandae doloremque, dolor, quam nostrum laudantium earum illum odio quasi excepturi mollitia corporis quas ipsa modi nihil, ad ex tempore.</p>
-              <p class="text-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi id perspiciatis facilis nulla possimus quasi, amet qui. Ea rerum officia, aspernatur nulla.</p>
+              <p class="text-gray">Ментор - обучает учеников.</p>
+              <p class="text-gray">Саппорт - следит за учёбой и за успеваюмостью учеников так же помагает им.</p>
             </div>
-            <h5 class="mt-30">Requirments:</h5>
+            <h5 class="mt-30">Требования:</h5>
             <ul class="list theme-colored">
-              <li>Lorem ipsum dolor sit elit</li>
-              <li>Lorem ipsum dolor sit amet</li>
+              <li>Знания BackEnd или FrontEnd</li>
+              <li>Работа с Базами Данных</li>
             </ul>
           </div>
         </div>
@@ -84,31 +82,18 @@
     <section class="divider parallax layer-overlay overlay-white-8" data-bg-img="{% static 'images/bg/bg1.jpg' %}">
       <div class="container-fluid">
         <div class="row">
+          <div class="col-md-5">
+            <h4 class="mt-0 mb-30 line-bottom">Найдите наше местоположение</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1894.9336216667268!2d72.80294596812865!3d40.53938101907273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bdac01ce44614d%3A0xd3ad4ab952424d2a!2z0KDQsNC80LDQt9Cw0L0!5e1!3m2!1sru!2skg!4v1664531848892!5m2!1sru!2skg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
           <div class="col-md-6 col-md-offset-3 bg-lightest-transparent p-30 pt-10">
-            <h3 class="text-center text-theme-colored mb-20">Apply Now</h3>
-            <form id="job_apply_form" name="job_apply_form" action="https://kodesolution.com/html/2016/studypress-html/demo/includes/job.php" method="post" enctype="multipart/form-data">
-              <div class="row">
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label>Name <small>*</small></label>
-                    <input name="form_name" type="text" placeholder="Enter Name" required="" class="form-control">
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label for="form_email">Email <small>*</small></label>
-                    <input name="form_email" class="form-control required email" type="email" placeholder="Enter Email">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label>Message <small>*</small></label>
-                <textarea id="form_message" name="form_message" class="form-control required" rows="5" placeholder="Your cover letter/message sent to the employer"></textarea>
-              </div>
-              <div class="form-group">
-                <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="" />
-               <a href="https://www.instagram.com/itrun.osh/"> <button type="submit" class="btn btn-block btn-dark btn-theme-colored btn-sm mt-20 pt-10 pb-10" >Apply Now</button></a>
-              </div>
+            <h3 class="text-center text-theme-colored mb-20">Оставить запрос</h3>
+            <form method="POST" action=".">
+              {% csrf_token %}
+
+              {{ form.as_p }}
+
+              <button>Разместить</button>
             </form>
             <!-- Job Form Validation-->
           </div>

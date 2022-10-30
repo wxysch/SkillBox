@@ -12,7 +12,6 @@ class Setting(models.Model):
     twitter = models.URLField(blank = True, null=True, verbose_name="Ссылка на twitter")
     youtube = models.URLField(blank = True, null=True, verbose_name="Ссылка на youtube")
     instagram = models.URLField(blank = True, null=True, verbose_name="Ссылка на instagram")
-    linkedin = models.URLField(blank = True, null=True, verbose_name="Ссылка на linkedin")
 
     def __str__(self):
         return self.title

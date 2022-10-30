@@ -15,11 +15,9 @@
         <div class="section-content">
           <div class="row">
             <div class="col-md-12">
-              <h2 class="title text-white">My Account</h2>
+              <h2 class="title text-white">Регистрация</h2>
               <ol class="breadcrumb text-left text-black mt-10">
-                <li><a href="form-register-style1.html#">Home</a></li>
-                <li><a href="form-register-style1.html#">Pages</a></li>
-                <li class="active text-gray-silver">Page Title</li>
+                
               </ol>
             </div>
           </div>
@@ -37,23 +35,23 @@
                 <a href="form-register-style1.html#" class="icon icon-bordered icon-rounded icon-sm pull-left mb-0 mr-10">
                   <i class="pe-7s-users"></i>
                 </a>
-                <h4 class="text-gray pt-10 mt-0 mb-30">Don't have an Account? Register Now.</h4>
+                
               </div>
               <div class="icon-box mb-0 p-0">
                 <a href="form-register-style1.html#" class="icon icon-bordered icon-rounded icon-sm pull-left mb-0 mr-10">
                   <i class="pe-7s-users"></i>
                 </a>
-                <h4 class="text-gray pt-10 mt-0 mb-30">Already have an Account? <a href="{% url 'login' %}">Login</a></h4>
+                <h4 class="text-gray pt-10 mt-0 mb-30">Уже есть аккаунт? <a href="{% url 'login' %}">Войти</a></h4>
               </div>
               <hr>
-              <p class="text-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi id perspiciatis facilis nulla possimus quasi, amet qui. Ea rerum officia, aspernatur nulla neque nesciunt alias.</p>
+             
               <div class="row">
                 <!-- <div class="form-group col-md-6">
                   <label for="form_name">Name</label>
                   <input name="form_name" class="form-control" type="text">
                 </div> -->
                 <div class="form-group col-md-6">
-                  <label>Email Address</label>
+                  <label>Email</label>
                   <input name="email" class="form-control" type="email">
                 </div>
                 <div class="row">
@@ -65,37 +63,37 @@
               </div>
               <div class="row">
                 <div class="form-group col-md-6">
-                  <label for="form_choose_password">Choose profile image</label>
+                  <label for="form_choose_password">Выберите фото профиля</label>
                   <input id="form_choose_password" name="password1" class="form-control" type="file">
                 </div>
               </div>
               <div class="row">
                 <div class="form-group col-md-12">
-                  <label for="form_choose_username">Choose Username</label>
+                  <label for="form_choose_username">Выберите никнейм</label>
                   <input id="form_choose_username" name="username" class="form-control" type="text">
                 </div>
               </div>
               <div class="row">
                 <div class="form-group col-md-12">
-                  <label for="form_choose_username">Choose Phone</label>
+                  <label for="form_choose_username">Укажите номер телефона</label>
                   <input id="form_choose_username" name="phone" class="form-control" type="phone">
                 </div>
               </div>
               <div class="row">
                 <div class="form-group col-md-6">
-                  <label for="form_choose_password">Choose Password</label>
+                  <label for="form_choose_password">Придумайте пароль</label>
                   <input id="form_choose_password" name="password1" class="form-control" type="password">
                 </div>
                 <div class="form-group col-md-6">
-                  <label>Re-enter Password</label>
+                  <label>Подвердите пароль </label>
                   <input id="form_re_enter_password" name="password2"  class="form-control" type="password">
                 </div>
               </div>
               
               <div class="form-group">
                 
-                <button class="btn btn-dark btn-lg btn-block mt-15" type="submit">Register Now</button>
-                <a class="btn btn-dark btn-lg btn-block no-border mt-15 mb-15" href="{% provider_login_url 'google' %}" data-bg-color="#3b5998">Login google</a>
+                <button class="btn btn-dark btn-lg btn-block mt-15" type="submit">Зарегистрироваться</button>
+                <a class="btn btn-dark btn-lg btn-block no-border mt-15 mb-15" href="{% provider_login_url 'google' %}" data-bg-color="#3b5998">Войти с google</a>
               </div>
           </div>
         </div>

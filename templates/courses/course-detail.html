@@ -11,11 +11,9 @@
         <div class="section-content">
           <div class="row">
             <div class="col-md-12">
-              <h2 class="title text-white">Course Details</h2>
+              <h2 class="title text-white">Детали курса</h2>
               <ol class="breadcrumb text-left text-black mt-10">
-                <li><a href="page-courses-accounting-technologies.html#">Home</a></li>
-                <li><a href="page-courses-accounting-technologies.html#">Pages</a></li>
-                <li class="active text-gray-silver">Page Title</li>
+              
               </ol>
             </div>
           </div>
@@ -31,7 +29,7 @@
             <div class="single-service">
               <img src="{{ course.course_image.url }}" alt="">
               <h3 class="text-theme-colored line-bottom text-theme-colored">Профессия: {{ course.name }}</h3>
-              <h4 class="mt-0"><span class="text-theme-color-2">Price :</span>{{ course.price }}</h4>
+              <h4 class="mt-0"><span class="text-theme-color-2">Цена :</span>{{ course.price }}</h4>
                 <ul class="review_text list-inline">
                   <li>
                     <div class="star-rating" title="Rated 4.50 out of 5"><span style="width: 90%;">4.50</span></div>
@@ -45,7 +43,7 @@
           <div class="col-sm-12 col-md-4">
             <div class="sidebar sidebar-left mt-sm-30 ml-40">
               <div class="widget">
-                <h4 class="widget-title line-bottom">Courses <span class="text-theme-color-2">List</span></h4>
+                <h4 class="widget-title line-bottom">Курс <span class="text-theme-color-2"></span></h4>
                 <div class="services-list">
                   <ul class="list list-border angle-double-right">
                     <li class="active"><a href="{% url 'bank' %}">{{  course.name }}-Купить</a></li>
@@ -53,23 +51,23 @@
                 </div>
               </div>
               <div class="widget">
-                <h4 class="widget-title line-bottom">Opening <span class="text-theme-color-2">Hours</span></h4>
+                <h4 class="widget-title line-bottom">График <span class="text-theme-color-2">Работы</span></h4>
                 <div class="opening-hours">
                   <ul class="list-border">
-                    <li class="clearfix"> <span> Mon - Tues :  </span>
+                    <li class="clearfix"> <span> ПН-ВТ :  </span>
                       <div class="value pull-right"> 8.00 am - 9.00 pm </div>
                     </li>
-                    <li class="clearfix"> <span> Wednes - Thurs :</span>
+                    <li class="clearfix"> <span> СР-ЧТ :</span>
                       <div class="value pull-right"> 8.00 am - 9.00 pm </div>
                     </li>
-                    <li class="clearfix"> <span> Fri : </span>
+                    <li class="clearfix"> <span> ПТ : </span>
                       <div class="value pull-right"> 8.00 am - 9.00 pm </div>
                     </li>
-                    <li class="clearfix"> <span> Saturday : </span>
+                    <li class="clearfix"> <span> СБ : </span>
                       <div class="value pull-right"> 8.00 am - 9.00 pm </div>
                     </li>
-                    <li class="clearfix"> <span> Sun : </span>
-                      <div class="value pull-right"> Closed </div>
+                    <li class="clearfix"> <span> ВС : </span>
+                      <div class="value pull-right"> ЗАКРЫТО </div>
                     </li>
                   </ul>
                 </div>
@@ -89,9 +87,16 @@
                     <textarea name="text" class="form-control" required="" placeholder="Вы не можете оставить отзыв т.к вы не зарегистрированы" rows="3"></textarea>
                     {% endif %}
                   </div>
-                  
+                 
                 </form>
                 
+                <form method="POST" action=".">
+                  {% csrf_token %}
+    
+                  {{ form.as_p }}
+    
+                  <button>Разместить</button>
+                </form>
                 <!-- Quick Contact Form Validation-->
                 
               </div>

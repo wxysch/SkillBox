@@ -21,7 +21,11 @@
                   <li class="text-white"></li>
                   <li class="text-white"></li>
                   <li>
-                    <a class="text-white" href="{% url 'register' %}">Login</a>
+                    {% if user.is_authenticated %}
+                    <a class="text-white" href="{% url 'logout' %}">Выйти</a>
+                    {% else %}
+                    <a class="text-white" href="{% url 'register'  %}">Войти</a>
+                    {% endif %}
                   </li>
                 </ul>
               </div>
@@ -144,9 +148,10 @@
                   {% csrf_token %}
                   <a class="btn btn-colored btn-flat bg-theme-color-2 text-white font-14 bs-modal-ajax-load mt-0 p-25 pr-15 pl-15"  href="{% url 'profile' %}">{{ request.user.username }}</a>
                   {% else %}
-                  <a class="btn btn-colored btn-flat bg-theme-color-2 text-white font-14 bs-modal-ajax-load mt-0 p-25 pr-15 pl-15"  href="{% url 'register' %}">Register</a>
+                  
                   {% endif %}
                   <!-- Modal: Book Now End -->
+                  <a class="btn btn-theme-colored btn-flat btn-lg mt-10 mb-sm-30" href="{% url 'index_dark' %}"> </a>
                 </li>
               </ul>
               <div id="top-search-bar" class="collapse">
